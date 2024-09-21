@@ -1,0 +1,21 @@
+@mixin retir-font($color, $height, $size, $weight) {
+    color: $color;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+.retir {
+    @include retir-font(#212121, 16px, 14px, 400);
+    position: relative;
+
+    .horizontal-divider {
+        border-bottom: 1px solid #E2E2E2;
+    }
+
+    .vertical-divider {
+        border-right: 1px solid #E2E2E2;
+    }
+}

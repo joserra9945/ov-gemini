@@ -1,0 +1,54 @@
+@import "../../styles/component-styles.scss";
+
+.effect-container {
+  margin-left: auto;
+  margin-right: auto;
+  .card-title__arrow {
+    margin-right: 1rem;
+  }
+  .filepond-with-form {
+    margin-top: 40px;
+  }
+  .save__button {
+    @include for-laptops {
+      justify-content: flex-end !important;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .titulo-stepper h1 {
+    font-size: 1.5rem !important;
+  }
+  .edit-effect__container {
+    width: 100%;
+    padding: 20px;
+  }
+  .filepond-with-form {
+    margin-top: 0px !important;
+  }
+  .factura-form {
+    margin-top: 1rem;
+  }
+  .pagaré-form {
+    margin-top: 1rem;
+  }
+  .documentacionRequerida > .card {
+    > .datatable-component {
+      margin-top: -20px !important;
+    }
+    > div {
+      margin-bottom: 0px !important;
+      > h1 {
+        margin-bottom: 0px !important;
+        font-size: 1.5rem !important;
+      }
+    }
+  }
+  .resumen-operacion-container {
+    margin-top: -2.5rem;
+    > h1 {
+      font-size: 1.5rem !important;
+    }
+  }
+}

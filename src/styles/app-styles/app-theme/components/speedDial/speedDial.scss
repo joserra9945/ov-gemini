@@ -1,0 +1,82 @@
+.p-speeddial {
+  width: 140px;
+  position: fixed;
+  &.p-speeddial-direction-up {
+    right: 25px;
+    bottom: 20px;
+    z-index: 8;
+    align-items: flex-end;
+    @include for-phone {
+      bottom: 70px;
+    }
+  }
+  .p-speeddial-button {
+    &.p-button-icon-only.p-button-rounded {
+      height: 3rem;
+      width: 3rem;
+    }
+    .p-button-icon {
+      font-size: 1.3rem !important;
+    }
+  }
+  &.p-speeddial-opened {
+    .p-speeddial-list {
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 6px;
+      display: flex;
+    }
+  }
+  .p-speeddial-list {
+    display: none;
+    border-radius: 6px;
+    .p-speeddial-item {
+      margin: 0;
+      border: 1px solid white;
+      .p-speeddial-action {
+        border-radius: unset;
+        background-color: white;
+        &.p-speeddial__custom-template {
+          width: 120px;
+          color: black;
+          font-weight: 500;
+          border: none;
+        }
+      }
+      &:first-child {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+      &:last-child {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+      }
+    }
+  }
+}
+
+.p-speeddial-mask {
+  height: 0%;
+  width: 0%;
+}
+.p-speeddial.p-speeddial-direction-up {
+  z-index: 10;
+  min-width: 250px;
+  .p-speeddial-list,
+  .p-speeddial-item {
+    width: 100%;
+  }
+  .p-speeddial-list
+    .p-speeddial-item
+    .p-speeddial-action.p-speeddial__custom-template {
+    width: 100%;
+  }
+  .p-speeddial-action {
+    justify-content: flex-start;
+    padding: 20px;
+  }
+}
+.p-speeddial-mask-visible {
+  z-index: 9;
+  height: 100%;
+  width: 100%;
+}

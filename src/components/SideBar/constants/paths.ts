@@ -1,0 +1,206 @@
+import {
+  faAddressCard,
+  faArrowAltCircleRight,
+  faBriefcase,
+  faCircleInfo,
+  faEuroSign,
+  faFileLines,
+  faInboxFull,
+  faMoneyBill,
+  faMoneyCheckDollar,
+  faUser,
+  faUserPen,
+  faUsers,
+} from '@fortawesome/pro-light-svg-icons';
+
+import { PathItem } from '../interfaces/SidebarInterfaces';
+
+const Paths: PathItem[] = [
+  {
+    key: 1,
+    path: '/user-ad',
+    title: 'Poseer librador',
+    icon: faUsers,
+    ad: true,
+  },
+  {
+    key: 2,
+    path: '/',
+    title: 'Operaciones',
+    icon: faEuroSign,
+    ad: false,
+  },
+  {
+    key: 3,
+    path: '/prestamos',
+    title: 'Préstamos',
+    icon: faMoneyBill,
+    ad: process.env.REACT_APP_API_ENV === 'PRODUCTION',
+  },
+  {
+    key: 4,
+    path: '/cesiones',
+    title: 'Cesión de contratos',
+    icon: faArrowAltCircleRight,
+    ad: false,
+  },
+  {
+    key: 5,
+    path: '/doc-requerida',
+    title: 'Documentación requerida',
+    icon: faFileLines,
+    ad: false,
+    hasNotification: true,
+  },
+  {
+    key: 6,
+    path: '/cuenta-cliente',
+    title: 'Cuenta cliente',
+    icon: faCircleInfo,
+    ad: false,
+  },
+  {
+    key: 7,
+    path: '',
+    title: 'Mis Datos',
+    icon: faAddressCard,
+    ad: false,
+    children: [
+      {
+        key: 7.1,
+        path: '/perfil-empresa',
+        title: 'Perfil empresa',
+        icon: faBriefcase,
+        ad: false,
+      },
+      {
+        key: 7.2,
+        path: '/firmantes',
+        title: 'Firmantes',
+        icon: faUserPen,
+        ad: false,
+      },
+      {
+        key: 7.3,
+        path: '/mi-documentacion',
+        title: 'Documentacion',
+        icon: faInboxFull,
+        ad: false,
+      },
+      {
+        key: 7.4,
+        path: '/perfil',
+        title: 'Perfil',
+        icon: faUser,
+        ad: false,
+      },
+      {
+        key: 7.5,
+        path: '/cuentas',
+        title: 'Cuentas',
+        ad: false,
+        icon: faMoneyCheckDollar,
+      },
+    ],
+  },
+];
+
+export const restructuredArray: PathItem[] = [
+  {
+    key: 1,
+    path: '',
+    title: 'Financiación',
+    ad: false,
+    children: [
+      {
+        key: 1.1,
+        path: '/user-ad',
+        title: 'Poseer librador',
+        icon: faUsers,
+        ad: true,
+      },
+      {
+        key: 1.2,
+        path: '/',
+        title: 'Operaciones',
+        icon: faEuroSign,
+        ad: false,
+      },
+      {
+        key: 1.3,
+        path: '/prestamos',
+        title: 'Préstamos',
+        icon: faMoneyBill,
+        ad: process.env.REACT_APP_API_ENV === 'PRODUCTION',
+      },
+      {
+        key: 1.4,
+        path: '/cesiones',
+        title: 'Cesión de contratos',
+        icon: faArrowAltCircleRight,
+        ad: false,
+      },
+      {
+        key: 1.5,
+        path: '/doc-requerida',
+        title: 'Documentación requerida',
+        icon: faFileLines,
+        ad: false,
+        hasNotification: true,
+      },
+      {
+        key: 1.6,
+        path: '/cuenta-cliente',
+        title: 'Cuenta cliente',
+        icon: faCircleInfo,
+        ad: false,
+      },
+    ],
+  },
+  {
+    key: 2,
+    path: '',
+    title: 'Mis Datos',
+    icon: faAddressCard,
+    ad: false,
+    children: [
+      {
+        key: 2.1,
+        path: '/perfil-empresa',
+        title: 'Perfil empresa',
+        icon: faBriefcase,
+        ad: false,
+      },
+      {
+        key: 2.2,
+        path: '/firmantes',
+        title: 'Firmantes',
+        icon: faUserPen,
+        ad: false,
+      },
+      {
+        key: 2.3,
+        path: '/mi-documentacion',
+        title: 'Mi documentación',
+        icon: faInboxFull,
+        ad: false,
+      },
+      {
+        key: 2.4,
+        path: '/perfil',
+        title: 'Perfil',
+        icon: faUser,
+        ad: false,
+      },
+      {
+        key: 2.5,
+        path: '/cuentas',
+        title: 'Cuentas',
+        ad: false,
+        icon: faMoneyCheckDollar,
+      },
+    ],
+  },
+];
+
+export default Paths;

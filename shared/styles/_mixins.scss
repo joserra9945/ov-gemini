@@ -1,0 +1,15 @@
+@mixin estado-box-format($color: '') {
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  @if $color != '' {
+    background-color: transparentize($color, 0.9);
+    color: $color;
+  }
+  svg {
+    display: block;
+  }
+}

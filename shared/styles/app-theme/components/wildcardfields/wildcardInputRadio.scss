@@ -1,0 +1,17 @@
+.g-field {
+  &.g-radio {
+    &.radio-inline {
+      .label {
+        width: 100%;
+      }
+      .p-fluid {
+        width: 100%;
+        .radiobutton-component {
+          .row {
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+# build of Gefintech Cliente Front for development environment . This build runs as a change in the branch develop.
+
+name: "$(date:yy.MM.dd)$(rev:.r)"
+
+# Disable the CI trigger.
+trigger:
+  batch: true
+  branches:
+    include:
+    - main
+
+pool:
+  name: Default
+  # TODO - temporary agent while setting authentication on backup.
+  demands:
+    - Agent.ComputerName -equals DEVOPS01
+
+resources:
+  repositories:
+    - repository: DevOpsCommon
+      type: git
+      name: "Gefintech/DevOpsCommon"
+
+variables:
+  - group: Finanway_Cliente_Frontend_Release_DEV
+stages:
+  - template: Templates/node/Builds/NodeCoreIntegrationBuild.yml@DevOpsCommon
+    parameters:
+      # Development Environment Parameters
+      WebsiteServerPath: $(WebsiteServerPath_Dev)
+      MaintenancePageFile: $(MaintenancePageFile)
+      AdminUserDev: $(AdminUser_Dev)
+      AdminPasswdDev: $(AdminPasswd_Dev)
+      ServerIpDev: $(ServerIP_Dev)
+      NodeVersions: $(NodeVersions)
+      EnvironmentName: 'development'
+      backupPath: $(backupPath_Dev)
+      SubmoduleAccess: true
+      InstallLegacy: false
+      Token: $(Token)
+      UrlSubmodule: $(UrlSubmodule)
+      InstallStandard: true
+      ContentsToDeleteWhenDeploying: |
+        **
+        !gestion/**
+        !tarificador/**
+        !tarificador3/**
+        !mantenimiento.html
+        !web.config
+      ContentsForBackup: |
+        **
+        !gestion/**
+        !tarificador/**
+        !tarificador3/**

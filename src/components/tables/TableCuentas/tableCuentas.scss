@@ -1,0 +1,28 @@
+@import '../../../styles/component-styles.scss';
+
+.p-datatable {
+  &.p-datatable-responsive {
+    &.responsive-row {
+      .p-datatable-tbody {
+        > tr {
+          > td {
+            @include for-laptops {
+              display: table-cell;
+              float: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.column-iban {
+  .p-inputswitch {
+    &.p-inputswitch-checked {
+      .p-inputswitch-slider {
+        background: #00d8ac;
+      }
+    }
+  }
+}

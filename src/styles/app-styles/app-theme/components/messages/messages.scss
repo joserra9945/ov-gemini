@@ -1,0 +1,18 @@
+.g-messages {
+  padding: 15px;
+  span {
+    margin-left: 10px;
+  }
+  &--info {
+    background: transparentize($primary, 0.95);
+    color: $primary;
+  }
+  &--danger{
+    background: transparentize(#FF4949, 0.95);
+    color:#FF4949 ;
+  }
+  &--caution {
+    background: transparentize($caution, 0.95);
+    color: $caution;
+  }
+}

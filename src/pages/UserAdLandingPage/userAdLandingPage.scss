@@ -1,0 +1,22 @@
+@import '../../styles/component-styles.scss';
+.poseer-librador {
+  form input,
+  form > span {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .p-autocomplete-loader {
+    margin-top: -0.95rem;
+  }
+}
+
+@include for-phone {
+  button[name='login'] {
+    width: 100%;
+    font-size: 14px !important;
+    padding: 1rem !important;
+  }
+  .user-ad-landing-page__container * {
+    font-size: 1rem !important;
+  }
+}

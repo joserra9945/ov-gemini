@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" id="favicon" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Conéctate a FinanEDI y empieza a crear facturas" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+    <!-- SMARTLOCK -->
+    <!-- <script type="text/javascript">
+      window.smartlook||(function(d) {
+      var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+      var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+      c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
+      })(document);
+      smartlook('init', 'd57740e2bc79f7bf33057ade772c506a887dfc27');
+    </script> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <title></title>
+    <!-- ESTE SCRIPT, QUE SE HA DESCARGADO DE LA PÁGINA OFICIAL, CONTROLA EL PROGRAMA DE AUTOFIRMA-->
+    <script type="text/javascript" src="%PUBLIC_URL%/autoscript.js"></script>
+    <script type="text/javascript">
+      //PDF EN BASE64 A FIRMAR
+      var pdfBase64 = '';
+      //VARIABLE DONDE SE OBTENDRÁ EL PDF FIRMADO
+      var pdfBase64Firmado = '';
+
+      AutoScript.cargarAppAfirma();
+
+      //ESTA FUNCIÓN ES A LA QUE HAY QUE LLAMAR PARA LA FIRMA DEL PDF
+      //LO ÚNICO QUE HAY QUE MODIFICAR ES LA SIGUIENTE LÍNEA QUE ES LA QUE INDICA EL NÚMERO DE LA PÁGINA Y POSICIÓN DE LA FIRMA
+      //`signaturePage=1\nsignaturePositionOnPageUpperRightX=404\nsignaturePositionOnPageUpperRightY=235\nsignaturePositionOnPageLowerLeftX=234\nsignaturePositionOnPageLowerLeftY=135`
+      //EJ. DE POSICIONES: https://drive.google.com/file/d/1jd0iC7jcFJ11_XFwB0ulA5oiywXRC09l/view?usp=sharing
+      function doSignAndSave(pos, callback, errorCallback) {
+        try {
+          var data = pdfBase64;
+          var pdfUrl = `signaturePage=${pos?.page}\nsignaturePositionOnPageUpperRightX=${pos?.upperRightX}\nsignaturePositionOnPageUpperRightY=${pos?.upperRightY}\nsignaturePositionOnPageLowerLeftX=${pos?.lowerLeftX}\nsignaturePositionOnPageLowerLeftY=${pos?.lowerLeftY}`;
+          console.log(pdfUrl);
+          AutoScript.signAndSaveToFile(
+            'sign',
+            data || null,
+            'SHA256withRSA',
+            'PAdES',
+            pdfUrl,
+            null,
+            callback ? callback : showSignResultCallback,
+            errorCallback || showErrorCallback
+          );
+        } catch (e) {
+          try {
+            //LA FUNCIÓN SHOWLOG ES LA QUE RECIBE EL LOG DEL ESTADO
+            showLog(
+              'Type: ' +
+                AutoScript.getErrorType() +
+                '\nMessage: ' +
+                AutoScript.getErrorMessage()
+            );
+          } catch (ex) {
+            showLog('Error: ' + e);
+          }
+        }
+      }
+
+      //FUNCIÓN QUE SE EJECUTA SI TODO SALE OK Y SE RECIBE EL PDF FIRMADO EN BASE64
+      function showSignResultCallback(signatureB64, certificateB64, extraData) {
+        showLog('Firma OK');
+        pdfBase64Firmado = signatureB64;
+      }
+
+      //FUNCIÓN QUE CAPTURA LOS ERRORES DE AUTOFIRMA
+      function showErrorCallback(errorType, errorMessage) {
+        showLog('Type: ' + errorType + '\nMessage: ' + errorMessage);
+      }
+
+      //GESTIONA EL LOG, HAY UN ALERT DE EJEMPLO PERO SE DEBE GESTIONAR COMO SE CONSIDERE
+      function showLog(newLog) {
+        alert(newLog);
+      }
+    </script>
+  </head>
+
+  <body class="w-full h-full bg-white">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <main id="app-root" class="w-full h-full"></main>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  </body>
+</html>

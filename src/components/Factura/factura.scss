@@ -1,0 +1,95 @@
+@import '../../styles/component-styles.scss';
+
+.facturas-component {
+  @include for-phone {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .main-uploader {
+    width: 100%;
+
+    .filepond--wrapper {
+      display: none !important;
+    }
+
+    .filepond--item {
+      display: none !important;
+    }
+  }
+
+  .boton-subida {
+    margin-top: 10px;
+
+    .border-dotted-box {
+      border-radius: 0 !important;
+      border: 2px dashed #ccc;
+      width: 100%;
+      background-color: #fbfbfb;
+
+      .factura-svg {
+        text-align: center;
+        padding: 25px;
+        color: #d4d4d4;
+        font-size: 16px;
+      }
+    }
+
+    .p-button {
+      width: 100%;
+      margin-top: 35px;
+      height: 60px;
+
+      .p-button-icon-left {
+        margin-right: 16px;
+      }
+
+      .p-button-icon {
+        flex: 1;
+        text-align: right;
+        height: 31px;
+
+        &::before {
+          vertical-align: -50%;
+        }
+      }
+
+      .p-button-label {
+        text-align: left;
+      }
+    }
+  }
+
+  .card-subtitle {
+    margin-top: -1rem;
+  }
+}
+
+.nano-icon {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .nanonets-button {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 0.5rem !important;
+    width: 100%;
+    .p-button-label {
+      display: none;
+    }
+  }
+  .nanonets-load-wrapper {
+    flex-direction: column !important;
+  }
+  .nano-icon {
+    font-size: 1.25rem !important;
+  }
+
+  .assign-factura-pagare {
+    font-size: 16px;
+    .main-label {
+      display: flex;
+    }
+  }
+}

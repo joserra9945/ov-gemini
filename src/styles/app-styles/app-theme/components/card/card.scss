@@ -1,0 +1,66 @@
+@import '../../../variables';
+
+.card {
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+.card-max-height {
+  height: 100%;
+  max-height: calc(100vh - 180px);
+}
+
+.g-card.card--margin-bottom,
+.card--margin-bottom {
+  margin-bottom: 20px;
+}
+
+.g-card {
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+
+  @include for-phone {
+    width: 90%;
+  }
+}
+
+.card--add-padding {
+  padding: $default-padding;
+
+  @include for-phone {
+    padding: $mobile-padding;
+  }
+}
+
+.card--border {
+  &-4 {
+    border-radius: 4px;
+  }
+}
+
+.card-header {
+  padding: 10px;
+}
+
+.card-max-height {
+  height: 100%;
+  max-height: calc(100vh - 180px);
+}
+
+.card-mobile-no-padding {
+  @include for-phone {
+    padding: 0;
+  }
+}
+
+.full-width-mobile {
+  @include for-phone {
+    width: 100%;
+    box-shadow: none;
+    border-radius: unset;
+  }
+}

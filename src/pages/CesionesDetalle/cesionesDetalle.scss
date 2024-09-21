@@ -1,0 +1,16 @@
+.cesion-detalle__container {
+  height: 100%;
+  overflow-y: auto;
+  .g-tabview {
+    height: calc(100% - 90px);
+    overflow: hidden;
+    overflow-y: auto;
+    .g-tabview-panels {
+      .datos-cesion__container,
+      .datos-firma__container,
+      .documentacion__container {
+        padding: 32px 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+// Estado Financiación Efectos
+// 1 = Pendiente, 2 = EnEstudio, 3 = Aprobado, 4 = Denegado, 5 = Perdido
+
+@import '../../mixins';
+@import '../../variables';
+
+.estado-efecto-financiacion-1 {
+  @include estado-box-format($pendiente-font-color);
+}
+.estado-efecto-financiacion-2 {
+  @include estado-box-format($en-estudio-efecto);
+}
+.estado-efecto-financiacion-3 {
+  @include estado-box-format($aprobado);
+}
+.estado-efecto-financiacion-4 {
+  @include estado-box-format($rechazado);
+}
+.estado-efecto-financiacion-5 {
+  @include estado-box-format($invalidada-font-color);
+}
+.estado-efecto-financiacion-6 {
+  @include estado-box-format($pausada-font-color);
+}
+.estado-efecto-financiacion-7 {
+  @include estado-box-format($devuelto-font-color);
+}

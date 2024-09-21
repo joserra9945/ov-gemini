@@ -1,0 +1,32 @@
+// Pendiente = 0,1, Validado = 2, Rechazado = 3
+
+@import '../../mixins';
+@import '../../variables';
+
+.estado-documento-0,
+.estado-documento-1 {
+  @include estado-box-format($pendiente-font-color);
+}
+.estado-documento-2 {
+  @include estado-box-format($validado-font-color);
+}
+.estado-documento-3 {
+  @include estado-box-format($estado-rechazado);
+}
+.estado-documento-4 {
+  @include estado-box-format($cerrado-font-color);
+}
+
+.estado-documento-circulo-0,
+.estado-documento-circulo-1 {
+  background-color: $pendiente-font-color;
+}
+.estado-documento-circulo-2 {
+  background-color: $validado-font-color;
+}
+.estado-documento-circulo-3 {
+  background-color: $estado-rechazado;
+}
+.estado-documento-circulo-4 {
+  background-color: $cerrado-font-color;
+}

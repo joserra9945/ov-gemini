@@ -1,0 +1,32 @@
+@import '../../styles/component-styles.scss';
+
+.doc-requerida {
+  width: 100%;
+  .card {
+    margin-bottom: 15px;
+    &.doc-requerida-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @include for-phone {
+        padding: 2rem 1rem;
+      }
+      @include for-tablet {
+        padding: 10px;
+      }
+      .doc-requerida-notification {
+        color: #c50000;
+        font-size: 18px;
+        line-height: 20px;
+      }
+      .doc-requerida-zero-documents {
+        color: #0069aa;
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+  }
+  .p-datatable .p-datatable-thead tr {
+    box-shadow: none;
+  }
+}

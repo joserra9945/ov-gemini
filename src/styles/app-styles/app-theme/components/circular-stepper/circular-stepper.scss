@@ -1,0 +1,36 @@
+.circular-stepper-wrapper {
+  display: flex;
+  align-items: center;
+  .circular-stepper {
+    width: 33px;
+    height: 33px;
+    .CircularProgressbar .CircularProgressbar-trail {
+      stroke-width: 4;
+    }
+    .CircularProgressbar .CircularProgressbar-path {
+      stroke: url(#idCSS);
+    }
+    .CircularProgressbar .CircularProgressbar-text {
+      font-weight: 700;
+      dominant-baseline: central;
+    }
+  }
+  .circular-stepper-text {
+    flex-direction: column;
+    display: flex;
+    margin-left: 15px;
+    .circular-stepper-title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #1a2543;
+    }
+
+    .circular-stepper-label {
+      font-size: 14px;
+      line-height: 20px;
+      color: #222222;
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.calendario {
+  .p-button {
+    color: #1e78ff !important;
+    border: 1px solid #ced4da !important;
+    border-left: none !important;
+    background-color: transparent !important;
+  }
+  .p-inputtext:hover {
+    border: transparent !important;
+  }
+  .p-inputtext {
+    border-right: none !important;
+  }
+  .p-button:hover {
+    background-color: transparent !important;
+  }
+}
+
+.calendario:hover {
+  border: 1px solid #1e78ff !important;
+  border-radius: 3px !important;
+  .p-inputtext {
+    border: 1px solid #ced4da !important;
+    border-right: none !important;
+  }
+}

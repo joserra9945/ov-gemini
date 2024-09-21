@@ -1,0 +1,12 @@
+@import '../../../styles/component-styles.scss';
+
+.documentación-aportada-efecto__container {
+  max-height: 500px;
+  overflow: hidden;
+
+  @include for-laptops {
+    tr {
+      display: flex;
+    }
+  }
+}

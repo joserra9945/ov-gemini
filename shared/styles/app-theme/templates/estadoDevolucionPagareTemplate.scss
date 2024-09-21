@@ -1,0 +1,21 @@
+// NoGenerada = 0, Generando = 1, PendienteDeFirmar = 2, Firmada = 3, FirmaValidada = 4, Confirmada = 5
+
+@import '../../mixins';
+@import '../../variables';
+@import '../abstracts/colors';
+
+.estado-devolucionDePagare-0 {
+  @include estado-box-format($invalidada-font-color);
+}
+.estado-devolucionDePagare-1 {
+  @include estado-box-format($primary);
+}
+
+.estado-devolucionDePagare-2 {
+  @include estado-box-format($pendiente-font-color);
+}
+.estado-devolucionDePagare-3,
+.estado-devolucionDePagare-4,
+.estado-devolucionDePagare-5 {
+  @include estado-box-format($validado-font-color);
+}

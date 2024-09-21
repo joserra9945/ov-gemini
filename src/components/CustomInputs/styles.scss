@@ -1,0 +1,6 @@
+.react-select__menu-portal {
+  z-index: 1006 !important;
+  &.ignore-zindex {
+    z-index: 1000 !important;
+  }
+}

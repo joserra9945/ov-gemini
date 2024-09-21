@@ -1,0 +1,46 @@
+@import '../../styles/component-styles.scss';
+
+.notificaciones-wrapper {
+  .notificaciones__overlay {
+    right: 5rem;
+    top: 5rem;
+    min-width: 28rem;
+    border-radius: 8px;
+    @include for-phone {
+      right: 0;
+      top: 4rem;
+      min-width: 100%;
+      border-radius: 8px;
+      position: fixed;
+      height: 100%;
+    }
+    .g-overlay-header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: none;
+      .overlay__title {
+        font-size: 18px;
+        font-weight: 500;
+      }
+      .g-overlay__arrow-icon {
+        cursor: pointer;
+      }
+      .g-overlay__arrow-icon {
+        margin-right: 1rem;
+      }
+      .g-overlay__header-icons {
+        display: flex;
+        gap: 1rem;
+        padding: 0.5rem 0;
+        cursor: pointer;
+        .action__header {
+          font-size: 20px;
+          color: #555555;
+        }
+      }
+    }
+  }
+  .g-overlay-wrapper .g-overlay {
+    box-shadow: none;
+  }
+}

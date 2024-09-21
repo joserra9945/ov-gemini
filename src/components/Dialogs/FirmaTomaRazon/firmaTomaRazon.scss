@@ -1,0 +1,119 @@
+@import '../../../styles/component-styles.scss';
+.swal-toma-razon {
+  width: 40em;
+}
+.firma-toma-razon-dialog {
+  .dialog_openned {
+    width: 31%;
+    .fila {
+      display: flex;
+      height: 100%;
+      align-content: space-around;
+      margin: 0 -15px;
+      padding: 15px;
+      @include for-tablet {
+        flex-wrap: wrap;
+      }
+      .columna {
+        height: 100%;
+        width: 100%;
+        padding: 0 15px;
+        .header {
+          margin-top: 20px;
+          text-align: center;
+          margin-bottom: 20px;
+          .opt {
+            font-weight: bolder;
+            text-transform: uppercase;
+            color: $app-color;
+            font-size: 14px;
+            margin-bottom: 3px;
+          }
+        }
+        .content {
+          .custom-list {
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            counter-reset: 1;
+
+            li:not(.skip) {
+              counter-increment: listado 1;
+              list-style: none;
+              display: flex;
+            }
+            li:not(.skip):before {
+              content: counter(listado);
+              background-color: $app-color;
+              color: white;
+              padding: 2px 8px;
+              margin-right: 10px;
+              border-radius: 30px;
+              height: 100%;
+              font-size: 12px;
+            }
+            .skip {
+              list-style: none;
+              margin: 0 auto;
+              .transparent-button {
+                background-color: transparent;
+                border: 2px solid $app-color;
+                &.p-disabled {
+                  color: black;
+                }
+              }
+            }
+            li,
+            li.skip {
+              margin-bottom: 30px;
+            }
+          }
+          .inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: 0;
+          }
+          .footer-buttons {
+            margin-top: 5%;
+            justify-content: center;
+            .g-button {
+              border-radius: 6px;
+              padding: 16px 24px;
+              &.transparent-button {
+                border: 1px solid $app-color;
+                background-color: transparent;
+                &.g-button-disabled {
+                  color: #7e7878;
+                  border-color: #7e7878;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .columna-right {
+        text-align: center;
+        height: 100%;
+        .content {
+          height: 100%;
+          button {
+            margin: 0 auto;
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+.firma-razon-certificado__upload-button-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  label {
+    margin-top: 20px;
+  }
+}

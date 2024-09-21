@@ -1,0 +1,13 @@
+.p-field--select-filter {
+  .react-select {
+    display: block;
+    &.reactselect-invalid {
+      border-color: #f44336;
+    }
+    .g-react-select {
+      &.react-select__control {
+        width: 100%;
+      }
+    }
+  }
+}

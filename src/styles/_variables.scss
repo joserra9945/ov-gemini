@@ -1,0 +1,113 @@
+/*
+ * Accepted app global variables
+ */
+
+// Header related vars
+$header-height: 70px;
+$header-box-shadow: 0px 2px 4px -2px #00000017, 0px 1px 18px -1px #00000017;
+$header-background-color: white;
+
+// Card related vars
+$card-border-radius: $global-border-radius;
+$card-background: #ffffff;
+$card-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+$card-paddding: 35px;
+
+// Form Input related vars
+$input-placeholder-color: $disabled-option;
+
+// Theme related vars
+$base-theme: Bootstrap;
+$skin-name: kendo-app-boostrap;
+$swatch-name: Bootstrap;
+$border-radius: $global-border-radius;
+
+// Table related vars
+$row-border-radius: $global-border-radius;
+$td-color: #6e6e6e;
+
+// Estados related vars
+$otros: #e3e3e3;
+$pendiente: #ff961c;
+$pendiente-pago: #ff961c;
+$pagado: #30d59b;
+$validado: #34b53a;
+$invalidado: tomato;
+$perdida: #888888;
+$dudoso: #ffc568;
+$no-financiado: #e40139;
+$pausada-font-color: #888888;
+$devuelto-font-color: #888888;
+$rechazado: #919191;
+$rechazado-font-color: black;
+$contrato-no-enviado: #00bec2;
+$pte-generar-contrato: #787878;
+$enviando-contrato: #004ad1;
+
+$otros: #e3e3e3;
+$pendiente-cesion: #fdedc9;
+$pendiente-pago-cesion: #fdedc9;
+$dudoso-cesion: #fdedc9;
+$pagado: #34b53a;
+$validado-state: #b1ebc9;
+$impreso: #b1ebc9;
+$autorizado: #b1ebc9;
+$firmada: #b1ebc9;
+$en-estudio: #b1ebc9;
+$eliminado: rgb(250, 197, 189);
+$no-autorizado: rgb(250, 197, 189);
+$rechazado: #bbb8b8;
+$cerrado: #c6dbe8;
+
+$pendiente-font-color: #f5b44d;
+$pendiente-pago-font-color: #f5b44d;
+$dudoso-font-color: #f5b44d;
+$pagado-font-color: rgb(60, 173, 60);
+$validado-font-color: rgb(60, 173, 60);
+$impreso-font-color: rgb(60, 173, 60);
+$autorizado-font-color: rgb(60, 173, 60);
+$firmada-font-color: rgb(60, 173, 60);
+$en-estudio-font-color: rgb(60, 173, 60);
+$eliminado-font-color: tomato;
+$no-autorizado-font-color: tomato;
+$rechazado-font-color: #2e2d2d;
+$cerrado-font-color: #046bab;
+
+$pendiente-border-color: #f5b44d;
+$pendiente-pago-border-color: #f5b44d;
+$dudoso-border-color: #f5b44d;
+$pagado-border-color: rgb(60, 173, 60);
+$validado-border-color: rgb(60, 173, 60);
+$impreso-border-color: rgb(60, 173, 60);
+$autorizado-border-color: rgb(60, 173, 60);
+$firmada-border-color: rgb(60, 173, 60);
+$en-estudio-border-color: rgb(60, 173, 60);
+$eliminado-border-color: rgb(221, 74, 48);
+$no-autorizado-border-color: rgb(221, 74, 48);
+$rechazado-border-color: #2e2d2d;
+$cerrado-border-color: #046bab;
+
+$pendiente-firmar-digital: #ff961c;
+$firmada-digitalmente: #30d59b;
+$pendiente-firmar-notario: #ff961c;
+$solicitud-firma-confirmada: #30d59b;
+$firma-notario-solicitada: #0069aa;
+$contrato-generado: #0069aa;
+$contrato-enviado-notaria: #30d59b;
+$enviando-contrato-notaria: #0069aa;
+$firmada-notario: #30d59b;
+$firma-digital-rechazada: #e40139;
+
+$pendiente-firmar-digital-documento-cesion: #ff961c;
+$firma-digital-enviada-documento-cesion: #0069aa;
+$firmado-digitalmente-documento-cesion: #30d59b;
+$firma-digital-cancelada-documento-cesion: #e40139;
+$firma-digital-rechazada-documento-cesion: #e40139;
+$pendiente-firmar-notario-documento-cesion: #ff961c;
+$firmada-notario-documento-cesion: #30d59b;
+
+$default-padding: 20px;
+$mobile-padding: 16px;
+
+$en-revision: #0069aa;
+$estado-rechazado: #e40139;

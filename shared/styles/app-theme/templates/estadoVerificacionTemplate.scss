@@ -1,0 +1,29 @@
+//0:NoGenerado; 1:PendienteDeEnvio; 2:Generado; 3:Enviado; 4:ErrorEnEnvio; 5:Recibido; 6:Verificado; 7:NoVerificado
+
+@import '../../mixins';
+@import '../../variables';
+
+.estado-verificacion-template--1 {
+  @include estado-box-format($verificacion-varios);
+}
+
+.estado-verificacion-template-0,
+.estado-verificacion-template-1 {
+  @include estado-box-format($pendiente-enviar);
+}
+
+.estado-verificacion-template-2,
+.estado-verificacion-template-3 {
+  @include estado-box-format($contrato-generado);
+}
+
+.estado-verificacion-template-4,
+.estado-verificacion-template-7 {
+  @include estado-box-format($rechazado);
+}
+
+.estado-verificacion-template-5,
+.estado-verificacion-template-6,
+.estado-verificacion-template-8 {
+  @include estado-box-format($admitido);
+}

@@ -1,0 +1,35 @@
+.container-open {
+  margin-left: $sidebar-width !important;
+  transition: 0.5s;
+  width: calc(100vw - #{$sidebar-width}) !important;
+}
+
+.container-collapsed {
+  transition: 0.5s;
+  width: calc(100vw - #{$sidebar-width-collapsed});
+  margin-left: $sidebar-width-collapsed;
+  height: calc(100% - 64px);
+  &:not(&.not-logged-container) {
+    width: calc(100% - 80px);
+    margin-left: 80px;
+  }
+}
+
+.container-collapsed,
+.container-open {
+  @include for-phone {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.mask-layout {
+  background-color: rgba(0, 0, 0, 0.336);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  @include for-laptops-and-rest {
+    z-index: 9;
+  }
+}

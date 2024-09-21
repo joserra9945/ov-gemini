@@ -1,0 +1,33 @@
+.sidebar {
+  background: #ffffff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+  height: calc(100vh - 70px);
+  left: 0px;
+  position: absolute;
+  top: 70px;
+  z-index: 5;
+  overflow: hidden;
+  .ant-menu-item {
+    display: flex;
+    align-items: center;
+    span {
+      margin-left: 10px;
+    }
+  }
+
+  .version,
+  .versionApi {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.sidebar-open {
+  width: $sidebar-width;
+  transition: 0.5s;
+}
+
+.sidebar-collapsed {
+  transition: 0.5s;
+  width: $sidebar-width-collapsed;
+}

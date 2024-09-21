@@ -1,0 +1,22 @@
+.container-open {
+  margin-left: $sidebar-width !important;
+
+  transition: 0.5s;
+
+  width: calc(100vw - #{$sidebar-width}) !important;
+}
+
+.container-collapsed {
+  transition: 0.5s;
+
+  width: calc(100vw - #{$sidebar-width-collapsed}) !important;
+
+  margin-left: $sidebar-width-collapsed !important;
+}
+
+.container-collapsed,
+.container-open {
+  padding-left: 30px;
+
+  padding-right: 30px;
+}

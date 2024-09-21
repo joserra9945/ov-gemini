@@ -1,0 +1,56 @@
+@import '../../styles.scss';
+
+.retir-owners {
+    justify-content: space-evenly;
+
+    .retir-owners-card {
+        background: #FFFFFF;
+        border-radius: 12px;
+        box-shadow: 0px 2px 8px rgba(33, 33, 33, 0.12);
+        width: 400px;
+
+        .retir-owners-card-header {
+            @include retir-font(#212121, 21px, 16px, 500);
+
+            img {
+                height: 44.57px;
+                width: 46.29px;
+            }
+
+            > div {
+                > div:nth-of-type(1) {
+                    color: #0069AA;
+                }
+
+                > div:nth-of-type(2) {
+                    @include retir-font(#212121, 16px, 14px, 400);
+                }
+            }
+        }
+
+        .retir-owners-card-subHeader {
+            > div {
+                > div:first-child {
+                    @include retir-font(#30D59B, 21px, 18px, 500);
+                }
+
+                > div:last-child {
+                    span {
+                        @include retir-font( #0069AA, 16px, 14px, 500);
+                    }
+                }
+            }
+        }
+
+        .retir-owners-card-info {
+
+            .sociedades-number {
+                @include retir-font(#212121, 16px, 14px, 500);
+            }
+
+            > div:last-child {
+                @include retir-font(#212121, 19px, 16px, 400);
+            }
+        }
+    }
+}

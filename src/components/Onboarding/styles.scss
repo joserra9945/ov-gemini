@@ -1,0 +1,44 @@
+.on-board {
+  margin: 0 auto;
+
+  .title {
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 42px;
+    }
+  }
+
+  .panel {
+    .border-dotted-box {
+      border-radius: 0 !important;
+      border: 2px dashed #ccc;
+      width: 100%;
+      background-color: #fbfbfb;
+
+      .factura-svg {
+        text-align: center;
+        padding: 25px;
+        color: #d4d4d4;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .buttons {
+    margin-top: 35px;
+
+    .p-button {
+      width: 100%;
+      height: 60px;
+
+      .p-button-icon-left {
+        margin-right: 16px;
+      }
+
+      .p-button-icon {
+        text-align: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.action-button-next-steps {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding-top: 20px;
+}
+
+.icon_title {
+  margin-right: 2%;
+}
+
+.firmantes-scroll {
+  overflow-y: scroll;
+  max-height: 20rem;
+}
+
+
+.tipoCargo{
+  font-size: 16px !important;
+}

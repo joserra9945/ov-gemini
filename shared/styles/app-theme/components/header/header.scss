@@ -1,0 +1,25 @@
+header {
+  &.g-header-wrapper {
+    background-color: white;
+    height: 70px;
+    display: flex;
+    padding: 0 30px;
+    align-items: center;
+  }
+
+  .g-header {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    &--left {
+      justify-content: flex-start;
+      img {
+        cursor: pointer;
+      }
+    }
+
+    &--right {
+      justify-content: flex-end;
+    }
+  }
+}

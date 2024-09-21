@@ -1,0 +1,124 @@
+@import '../../../styles/component-styles.scss';
+
+.doc-requerida-button-efectos {
+  position: relative;
+  margin-right: 2px;
+  button.g-button {
+    height: 40px;
+    width: 40px !important;
+    background-color: white;
+    svg {
+      color: $primary;
+    }
+    @include for-phone {
+      color: transparent;
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }
+  span {
+    &.g-badge {
+      background-color: white;
+      min-width: 0.75rem;
+      line-height: 0.75rem;
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      height: 31%;
+    }
+  }
+}
+
+.action-buttons .actions-wrapper {
+  .icon-only-button {
+    padding: 0.75rem !important;
+  }
+  & > div:not(:last-of-type) {
+    margin-right: 10px;
+  }
+}
+
+.footer-desktop {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  .resumen-footer-right {
+    margin-left: 20px;
+  }
+  .resumen-totals {
+    font-weight: bold;
+  }
+  @include for-phone {
+    display: none;
+  }
+}
+
+.p-datatable-footer {
+  .responsive-footer {
+    .resumen-totals {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: flex-end;
+      @include for-phone {
+        max-width: 50%;
+        align-items: center;
+        .pi-info-circle {
+          margin-left: 5px;
+        }
+      }
+    }
+    .resumen-footer-right {
+      button {
+        padding: 13px;
+      }
+    }
+  }
+}
+
+.datatable-component {
+  .table-efectos-sin-asignar {
+    height: 100%;
+    .p-datatable-wrapper {
+      max-height: 100%;
+      @include for-phone {
+        max-height: auto;
+      }
+      .p-datatable-tfoot {
+        .resumen-totals {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: flex-end;
+        }
+      }
+    }
+    @include for-laptops-and-rest {
+      tr {
+        display: flex;
+      }
+    }
+  }
+}
+.efectos-movil-table {
+  @include for-phone {
+    table {
+      tr {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch;
+        td > span:first-child{
+          display: none!important;
+        }
+        .p-column-title{
+          width: 50%;
+        }
+      }
+    }
+  }
+}

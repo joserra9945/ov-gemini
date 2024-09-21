@@ -1,0 +1,74 @@
+.input-tag {
+  position: relative;
+  background: white;
+  border: 1px solid #d6d6d6;
+  border-radius: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 30px 0 5px;
+  .input-tag input {
+    border: none;
+    width: 100%;
+  }
+
+  .input-tag__tags {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .input-tag__tags li {
+    align-items: center;
+    background: $primary;
+    border-radius: 2px;
+    color: white;
+    display: flex;
+    font-weight: 300;
+    list-style: none;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding: 5px 10px;
+  }
+  & > button {
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 10px;
+    color: black !important;
+    font-size: 28px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .input-tag__tags li button,
+  & > button {
+    align-items: center;
+    appearance: none;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 12px;
+    height: 15px;
+    justify-content: center;
+    line-height: 0;
+    margin-left: 8px;
+    padding: 0;
+    transform: rotate(45deg);
+    width: 15px;
+  }
+
+  .input-tag__tags li.input-tag__tags__input {
+    background: none;
+    flex-grow: 1;
+    padding: 0;
+    cursor: text;
+    input {
+      border: none;
+      outline: none;
+      color: $typography-color;
+    }
+  }
+}

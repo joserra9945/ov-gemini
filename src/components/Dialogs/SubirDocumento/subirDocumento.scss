@@ -1,0 +1,67 @@
+@import '../../../styles/component-styles.scss';
+
+.otros-documentos__container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  .otros-documentos-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .otros-documentos__acordeon-tab {
+    box-shadow: 0px 1px 4px rgba(33, 33, 52, 0.1);
+    border-bottom: 0px;
+    border-radius: 0px 0px 0px 0px !important;
+    margin-bottom: 1px;
+  }
+}
+.footer-buttons .cancelar__button {
+  box-shadow: 0px 0px 0px !important;
+}
+.subir-doc-dialog {
+  width: 100%;
+  .dialog_content {
+    width: 35%;
+    margin: 4%;
+    @include for-phone {
+      height: 80% !important;
+      width: 80%;
+    }
+  }
+  .dialog_header {
+    .header_right {
+      visibility: hidden;
+    }
+  }
+  .dialog-container {
+    .filepond--hopper {
+      min-height: 200px !important;
+    }
+
+    .ayuda-usuario {
+      margin-top: 1%;
+      color: #0069aa;
+      text-align: center;
+      span {
+        font-weight: 600;
+      }
+      .imagenes-container {
+        @media (min-width: 1600px) {
+          display: flex;
+        }
+      }
+    }
+    .input-calendar__fecha-emision {
+      width: 50%;
+      margin-top: 20px;
+      @include for-phone {
+        width: 100%;
+      }
+    }
+    .input-calendar__fecha-cierre {
+      width: 50%;
+      margin-top: 20px;
+    }
+  }
+}

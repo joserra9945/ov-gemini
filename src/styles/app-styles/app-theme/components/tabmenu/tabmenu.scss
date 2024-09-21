@@ -1,0 +1,29 @@
+.tabmenu-override {
+  height: 64px;
+  .p-tabmenu-nav.p-reset {
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+    position: relative;
+    .p-tabmenuitem {
+      &.p-highlight {
+        .p-menuitem-link {
+          border-bottom: 4px solid $primary;
+        }
+        border: none;
+      }
+      .p-menuitem-link {
+        font-weight: 500;
+        font-size: 21px;
+        border: none;
+        line-height: 20px;
+        text-decoration: none;
+        @include for-tablet {
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+  .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link:not(.p-disabled):focus {
+    box-shadow: none;
+  }
+}

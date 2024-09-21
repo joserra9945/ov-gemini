@@ -1,0 +1,43 @@
+.venta-a-fondo-title {
+  display: flex;
+  margin-bottom: -15px;
+}
+.venta-a-fondo-estado {
+  display: flex;
+  margin-bottom: -5px;
+}
+.venta-a-fondo-numero {
+  display: flex;
+}
+.ventaAFondoColor {
+  &.--active {
+    color: #0069aa;
+  }
+  &.--disabled {
+    opacity: 25%;
+  }
+}
+.fechaUltimoCobro {
+  &.--active {
+    color: #1f1f1f;
+  }
+  &.--disabled {
+    opacity: 25%;
+  }
+}
+.fechaImpago {
+  &.--active {
+    color: #e40139;
+  }
+  &.--disabled {
+    opacity: 25%;
+  }
+}
+
+.ventaAFondoTooltip {
+  &.g-tooltip {
+    &.--disabled {
+      display: none;
+    }
+  }
+}

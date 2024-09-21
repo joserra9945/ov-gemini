@@ -1,0 +1,25 @@
+@import '../../mixins';
+@import '../../variables';
+
+.tipo-cuenta-cliente-0,
+.tipo-cuenta-cliente-1,
+.tipo-cuenta-cliente-9 {
+  @include estado-box-format($enviando-contrato);
+}
+
+.tipo-cuenta-cliente-5,
+.tipo-cuenta-cliente-10 {
+  @include estado-box-format($aprobado);
+}
+
+.tipo-cuenta-cliente-4,
+.tipo-cuenta-cliente-3,
+.tipo-cuenta-cliente-6,
+.tipo-cuenta-cliente-7,
+.tipo-cuenta-cliente-8,
+.tipo-cuenta-cliente-11,
+.tipo-cuenta-cliente-12,
+.tipo-cuenta-cliente-13,
+.tipo-cuenta-cliente-2 {
+  @include estado-box-format($rechazado);
+}

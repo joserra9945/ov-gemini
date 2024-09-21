@@ -1,0 +1,56 @@
+/*
+ * Accepted colors palette
+ */
+$primary: #1a2543;
+$primary-hover: saturate(lighten($primary, 10%), 20%);
+
+$accent: #6ebeed;
+$accent-hover: saturate(lighten($accent, 10%), 20%);
+
+$secondary: #99a0aa;
+$secondary-hover: darken($secondary, 10%);
+
+$light: #f8f8f8;
+$light-hover: saturate($light, 10%);
+
+$info: #0288d1;
+$info-hover: darken($info, 10%);
+
+$success: #00ae46;
+$success-hover: saturate(lighten($success, 10%), 20%);
+
+$danger: #d84951;
+$danger-hover: saturate(lighten($danger, 10%), 20%);
+
+$warning: #fcdc8a;
+$warning-hover: saturate(lighten($warning, 10%), 20%);
+
+$colors: (
+  primary: #1a2543,
+  primary-hover: saturate(lighten($primary, 10%), 20%),
+  accent: #6ebeed,
+  accent-hover: saturate(lighten($accent, 10%), 20%),
+  secondary: #99a0aa,
+  secondary-hover: darken($secondary, 10%),
+  light: #f8f8f8,
+  light-hover: saturate($light, 10%),
+  info: #0288d1,
+  info-hover: darken($info, 10%),
+  success: #00ae46,
+  success-hover: saturate(lighten($success, 10%), 20%),
+  danger: #d84951,
+  danger-hover: saturate(lighten($danger, 10%), 20%),
+  warning: #fcdc8a,
+  warning-hover: saturate(lighten($warning, 10%), 20%),
+);
+
+// Default theme
+$background-color: #f9fafb;
+$disabled-option: #dddfe2;
+$typography-color: #1a2543;
+$link-color: #71a6ff;
+$header-grey: #a9b5bd;
+
+// basic colors
+$white: #ffffff;
+$black: #000000;

@@ -1,0 +1,79 @@
+.select-buttton-operaciones-wrapper,
+.select-buttton-efectos-wrapper {
+  float: right;
+  padding: 5px;
+  background-color: #f2f5f7;
+  border-radius: 5px;
+
+  @include for-phone {
+    width: 100%;
+  }
+
+  .p-selectbutton .p-button.p-component {
+    background-color: #f2f5f7;
+    color: #cbcbcb;
+    border-radius: 5px;
+    font-size: 12px;
+    border: none;
+
+    @include for-phone {
+      width: 50%;
+    }
+
+    &.p-highlight {
+      background-color: white;
+      color: #323c47;
+      box-shadow: 0 0 2.2px rgba(0, 0, 0, 0.014), 0 0 5.3px rgba(0, 0, 0, 0.028);
+
+      &:hover {
+        background-color: none;
+        border: none;
+      }
+
+      &.p-focus {
+        border: none;
+      }
+
+      .button-select {
+        color: $primary;
+
+        svg {
+          color: $primary;
+        }
+      }
+    }
+
+    .button-select {
+      display: flex;
+      align-items: center;
+
+      svg {
+        height: 16px;
+        width: 16px;
+        color: #dddfe2;
+        @include for-phone {
+          display: none;
+          height: 0;
+          width: 0;
+        }
+      }
+
+      .label-select-button {
+        margin-left: 10px !important;
+        @include for-phone {
+          width: 100%;
+          text-align: center;
+          margin: 0 !important;
+        }
+      }
+
+      @include for-phone {
+        width: 100%;
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

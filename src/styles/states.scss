@@ -1,0 +1,425 @@
+/*
+export const estadosRevisionDocumentos = {
+  Pendiente: 1,
+  Validado: 2,
+  Rechazado: 3,
+  Dudoso: 4,
+};
+*/
+
+.estado-format-inner-box {
+  flex: 1;
+}
+
+/**
+  DOCUMENTO
+*/
+
+// Estado Revision Documentos
+// 1 = Pendiente, 2 = Validado, 3 = Rechazado, 4 = Dudoso, 5 = Eliminado, 6 = Pte. Firma
+.estado-documento-revision-1 {
+  @include estado-box-format($pendiente);
+}
+.estado-documento-revision-2 {
+  @include estado-box-format($validado);
+}
+.estado-documento-revision-3 {
+  @include estado-box-format($rechazado);
+}
+.estado-documento-revision-4 {
+  @include estado-box-format($dudoso);
+}
+.estado-documento-eliminado-5 {
+  @include estado-box-format($eliminado);
+}
+.estado-documento-revision-6 {
+  @include estado-box-format($pendiente-firmar-digital);
+}
+
+// Estados documento
+
+.error-documento {
+  @include estado-box-format;
+  background-color: #ed7c7c !important;
+  box-shadow: 0 0 2.2px rgba(0, 0, 0, 0.014), 0 0 5.3px rgba(0, 0, 0, 0.028),
+    0 0 10px rgba(0, 0, 0, 0.03);
+  color: white;
+  overflow: hidden;
+  max-width: 15em !important;
+}
+
+.pendiente-documento {
+  @include estado-box-format;
+  background-color: #a8a8a8 !important;
+  box-shadow: 0 0 2.2px rgba(0, 0, 0, 0.014), 0 0 5.3px rgba(0, 0, 0, 0.028),
+    0 0 10px rgba(0, 0, 0, 0.03);
+  color: white;
+  max-width: 15em !important;
+}
+
+.warning-documento {
+  @include estado-box-format;
+  background-color: #ffc568 !important;
+  box-shadow: 0 0 2.2px rgba(0, 0, 0, 0.014), 0 0 5.3px rgba(0, 0, 0, 0.028),
+    0 0 10px rgba(0, 0, 0, 0.03);
+  color: white;
+  max-width: 15em !important;
+}
+
+.success-documento {
+  @include estado-box-format;
+  background-color: #8fe9b4 !important;
+  box-shadow: 0 0 2.2px rgba(0, 0, 0, 0.014), 0 0 5.3px rgba(0, 0, 0, 0.028),
+    0 0 10px rgba(0, 0, 0, 0.03);
+  color: white;
+  max-width: 15em !important;
+}
+
+/**
+  EFECTOS
+*/
+
+// PENDIENTE
+.estado-efecto-format-1,
+.estado-efecto-format-2 {
+  @include estado-box-format;
+  background-color: transparentize($pendiente, 0.85);
+  color: $pendiente;
+}
+
+// VALIDADO
+.estado-efecto-format-3 {
+  @include estado-box-format;
+  background-color: transparentize($validado, 0.85);
+  color: $validado;
+}
+
+// RECHAZADO
+.estado-efecto-format-4 {
+  @include estado-box-format;
+  background-color: transparentize($rechazado, 0.85);
+  color: $rechazado;
+}
+
+// DUDOSO
+.estado-efecto-format-5 {
+  @include estado-box-format;
+  background-color: transparentize($no-financiado, 0.85);
+  color: $no-financiado;
+}
+
+.estado-efecto-format-1--mobile,
+.estado-efecto-format-2--mobile {
+  font-weight: 500;
+  color: $pendiente;
+}
+
+// VALIDADO
+.estado-efecto-format-3--mobile {
+  font-weight: 500;
+  color: $validado;
+}
+
+// RECHAZADO
+.estado-efecto-format-4--mobile {
+  font-weight: 500;
+  color: $rechazado;
+}
+
+// DUDOSO
+.estado-efecto-format-5--mobile {
+  font-weight: 500;
+  color: $no-financiado;
+}
+
+/**
+  OPERACIONES
+*/
+
+// 0 = Generando contrato, 1 = Enviando contrato, 2 = Contrato no enviado, 3 = Pte. de firma, 4 = Firmada,  5 = Pte. de pago, 6 = Cerrada, 7 = Parcialmente pagada, 8 = Pagada, , 9 = Invalidada, 10 = Perdida
+
+// GENERANDO CONTRATO
+.estado-operacion-cliente-format-0 {
+  @include estado-box-format;
+  background-color: transparentize($primary, 0.85);
+  color: $primary;
+}
+
+// ENVIANDO CONTRATO
+.estado-operacion-cliente-format-1 {
+  @include estado-box-format;
+  background-color: transparentize($enviando-contrato, 0.85);
+  color: $enviando-contrato;
+}
+
+// OP. PENDIENTE
+.estado-operacion-cliente-format-3,
+.estado-operacion-cliente-format-4,
+.estado-operacion-cliente-format-5 {
+  @include estado-box-format;
+  background-color: transparentize($pendiente, 0.85);
+  color: $pendiente;
+}
+
+// CERRADO
+.estado-operacion-cliente-format-6 {
+  @include estado-box-format;
+  background-color: transparentize($cerrado-font-color, 0.85);
+  color: $cerrado-font-color;
+}
+
+// PAGADO
+.estado-operacion-cliente-format-7,
+.estado-operacion-cliente-format-8 {
+  @include estado-box-format;
+  background-color: transparentize($pagado, 0.85);
+  color: $pagado;
+}
+
+// CONTRATO NO ENVIADO
+.estado-operacion-cliente-format-2 {
+  @include estado-box-format;
+  background-color: transparentize($contrato-no-enviado, 0.85);
+  color: $contrato-no-enviado;
+}
+
+// PTE. GENERAR CONTRATO || INVALIDADA
+.estado-operacion-cliente-format-9 {
+  @include estado-box-format;
+  background-color: transparentize($pte-generar-contrato, 0.85);
+  color: $pte-generar-contrato;
+}
+
+// PERDIDA
+.estado-operacion-cliente-format-10 {
+  @include estado-box-format;
+  background-color: transparentize($no-financiado, 0.85);
+  color: $no-financiado;
+}
+
+// VERIFICADA
+.efecto-verificado-false {
+  @include estado-box-format;
+  background-color: transparentize($pendiente, 0.85);
+  color: $pendiente;
+}
+.efecto-verificado-true {
+  @include estado-box-format;
+  background-color: transparentize($pagado, 0.85);
+  color: $pagado;
+}
+
+/* MOBILE */
+
+// GENERANDO CONTRATO
+.estado-operacion-cliente-format-0--mobile {
+  color: $primary;
+  font-weight: 500;
+}
+
+// ENVIANDO CONTRATO
+.estado-operacion-cliente-format-1--mobile {
+  color: $enviando-contrato;
+  font-weight: 500;
+}
+
+.estado-operacion-cliente-format-3--mobile,
+.estado-operacion-cliente-format-5--mobile {
+  color: $pendiente;
+  font-weight: 500;
+}
+
+.estado-operacion-cliente-format-6--mobile {
+  color: $cerrado-font-color;
+  font-weight: 500;
+}
+
+.estado-operacion-cliente-format-7--mobile,
+.estado-operacion-cliente-format-8--mobile {
+  color: $pagado;
+  font-weight: 500;
+}
+
+.estado-operacion-cliente-format-2--mobile {
+  color: $contrato-no-enviado;
+  font-weight: 500;
+}
+
+.estado-operacion-cliente-format-9--mobile {
+  color: $pte-generar-contrato;
+  font-weight: 500;
+}
+
+.estado-operacion-cliente-format-10--mobile {
+  color: $perdida;
+  font-weight: 500;
+}
+
+/** 
+  CESIONES!
+*/
+/* 
+1 = Pendiente, 2 = Validado, 3 = Rechazado, 4 = Dudoso, 5 = Eliminado, 6 = Pte. Firma
+*/
+.estado-documento-cesion-1,
+.estado-documento-cesion-4,
+.estado-documento-cesion-6 {
+  @include estado-box-format($pendiente-font-color);
+}
+.estado-documento-cesion-2 {
+  @include estado-box-format($validado-font-color);
+}
+.estado-documento-cesion-3 {
+  @include estado-box-format($rechazado-font-color);
+}
+.estado-documento-cesion-5 {
+  @include estado-box-format($eliminado-font-color);
+}
+
+// Estado firma cesión
+/**
+  * Actualizado a día 01/02/2022
+  * PendienteFirmaDigital = 1
+  * FirmadaDigitalmente = 2
+  * PendienteDeFirmaAnteNotario = 3
+  * FirmaAnteNotarioSolicitada = 4
+  * SolicitudDeFirmaConfirmada = 5
+  * ContratoGenerado = 6
+  * ContratoEnviadoANotaria = 7
+  * FirmadaAnteNotario = 8
+  */
+
+// Estado firma documento
+/**
+  * No aplica = 1
+  * Pte. de firma digital = 2
+  * Firma digital enviada = 3
+  * Firmado digitalmente = 4
+  * Firma digital cancelada = 5
+  * Firma digital rechazada = 6
+  * Pte. de firma ante notario = 7
+  * Firmado ante notario = 8
+  */
+
+.estado-firma-documento-2 {
+  @include estado-box-format($pendiente-firmar-digital-documento-cesion);
+}
+.estado-firma-documento-3 {
+  @include estado-box-format($firma-digital-enviada-documento-cesion);
+}
+.estado-firma-documento-4 {
+  @include estado-box-format($firmado-digitalmente-documento-cesion);
+}
+.estado-firma-documento-5 {
+  @include estado-box-format($firma-digital-cancelada-documento-cesion);
+}
+.estado-firma-documento-6 {
+  @include estado-box-format($firma-digital-rechazada-documento-cesion);
+}
+.estado-firma-documento-7 {
+  @include estado-box-format($pendiente-firmar-notario-documento-cesion);
+}
+.estado-firma-documento-8 {
+  @include estado-box-format($firmada-notario-documento-cesion);
+}
+
+$DEFAULT_FONT_SIZE_CESION: 14px;
+$DEFAULT_WIDTH: 270px;
+$DEFAULT_PADDING: 4px 32px 4px 32px;
+.estado-cesion-1 {
+  @include estado-box-format($pendiente-firmar-digital);
+  font-size: $DEFAULT_FONT_SIZE_CESION;
+  width: $DEFAULT_WIDTH;
+  padding: $DEFAULT_PADDING;
+}
+.estado-cesion-2 {
+  @include estado-box-format($firmada-digitalmente);
+  width: $DEFAULT_WIDTH;
+  font-size: $DEFAULT_FONT_SIZE_CESION;
+  padding: $DEFAULT_PADDING;
+}
+.estado-cesion-3 {
+  @include estado-box-format($pendiente-firmar-notario);
+  padding: $DEFAULT_PADDING;
+  width: $DEFAULT_WIDTH;
+  font-size: $DEFAULT_FONT_SIZE_CESION;
+}
+.estado-cesion-4 {
+  @include estado-box-format($firma-notario-solicitada);
+  width: $DEFAULT_WIDTH;
+  padding: $DEFAULT_PADDING;
+  font-size: $DEFAULT_FONT_SIZE_CESION;
+}
+.estado-cesion-5 {
+  @include estado-box-format($solicitud-firma-confirmada);
+  padding: $DEFAULT_PADDING;
+  width: $DEFAULT_WIDTH;
+  font-size: $DEFAULT_FONT_SIZE_CESION;
+}
+.estado-cesion-6 {
+  @include estado-box-format($contrato-generado);
+  padding: $DEFAULT_PADDING;
+  font-size: $DEFAULT_FONT_SIZE_CESION;
+  width: $DEFAULT_WIDTH;
+}
+.estado-cesion-7 {
+  @include estado-box-format($enviando-contrato-notaria);
+  padding: $DEFAULT_PADDING;
+  font-size: $DEFAULT_FONT_SIZE_CESION;
+  width: $DEFAULT_WIDTH;
+}
+.estado-cesion-8 {
+  @include estado-box-format($contrato-enviado-notaria);
+  font-size: $DEFAULT_FONT_SIZE_CESION;
+  padding: $DEFAULT_PADDING;
+  width: $DEFAULT_WIDTH;
+}
+.estado-cesion-9 {
+  @include estado-box-format($firmada-notario);
+  font-size: $DEFAULT_FONT_SIZE_CESION;
+  padding: $DEFAULT_PADDING;
+  width: $DEFAULT_WIDTH;
+}
+.estado-cesion-10 {
+  @include estado-box-format($firma-digital-rechazada);
+  padding: $DEFAULT_PADDING;
+  width: $DEFAULT_WIDTH;
+  font-size: $DEFAULT_FONT_SIZE_CESION;
+}
+
+/** 
+  CUENTAS
+  */
+.cuenta-verificada-0 {
+  @include estado-box-format($pendiente);
+}
+.cuenta-verificada-1 {
+  @include estado-box-format($pendiente);
+}
+.cuenta-verificada-2 {
+  @include estado-box-format($validado);
+}
+.cuenta-verificada-3 {
+  @include estado-box-format($invalidado);
+}
+
+/**
+ * Estados contactos
+ */
+.estado-contacto-0 {
+  @include estado-box-format($pendiente);
+}
+.estado-contacto-1 {
+  @include estado-box-format($en-revision);
+}
+.estado-contacto-2 {
+  @include estado-box-format($validado);
+}
+.estado-contacto-3 {
+  @include estado-box-format($estado-rechazado);
+}
+
+.rechazado {
+  background: rgba(197, 0, 0, 0.05);
+  color: #c50000;
+}

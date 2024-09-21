@@ -1,0 +1,65 @@
+.sidebar {
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+  height: calc(100vh - 65px);
+  left: 0px;
+  position: absolute;
+  top: 65px;
+  z-index: 10;
+  overflow: hidden;
+  &.sidebar-collapsed {
+    background: #1a2543;
+  }
+  .razon-social-mobile {
+    visibility: hidden;
+  }
+
+  @include for-phone {
+    width: 2.5rem;
+    margin-left: -20px;
+    height: 100%;
+
+    &.sidebar-open {
+      display: none;
+    }
+  }
+
+  @include for-tablet {
+    width: 2.5rem;
+    margin-left: -20px;
+    height: 100%;
+
+    &.sidebar-open {
+      display: none;
+    }
+  }
+
+  .mobile__divider {
+    visibility: hidden;
+    @include for-phone {
+      visibility: initial;
+    }
+  }
+}
+
+@include for-phone {
+  .mask-layout {
+    display: none;
+  }
+}
+
+@include for-tablet {
+  .mask-layout {
+    display: none;
+  }
+}
+
+.sidebar-open {
+  background: #1a2543;
+
+  .mobile__divider {
+    visibility: hidden;
+    @include for-phone {
+      visibility: initial;
+    }
+  }
+}

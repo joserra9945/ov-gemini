@@ -1,0 +1,288 @@
+@import '../../../styles/component-styles.scss';
+
+.file-uploader {
+  border: 2px dashed #dddfe2;
+  padding: 10px;
+  .react-button-loaders__btn {
+    span {
+      line-height: normal;
+    }
+  }
+}
+.motivo-rechazo {
+  width: 6em;
+  color: $caution;
+}
+
+.vincular__form {
+  .dialog_content.dialog_openned {
+    height: auto;
+    width: 55%;
+    @include for-tablet {
+      width: 100%;
+      height: 100%;
+    }
+    @include for-laptops {
+      width: 75%;
+    }
+  }
+}
+
+@include for-tablet {
+  .border-dotted-box {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: visible !important;
+    > .factura-svg {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      span {
+        overflow: visible !important;
+      }
+    }
+  }
+}
+
+.doc-requerida-container {
+  @include for-desktop {
+    > div {
+      max-width: 100%;
+    }
+    .tipo__documento {
+      max-width: 20rem;
+    }
+    .motivo-rechazo__documento {
+      max-width: 20rem;
+      .error-documento {
+        max-width: 100% !important;
+        text-align: center !important;
+      }
+      .pendiente-documento {
+        max-width: 100% !important;
+        text-align: center !important;
+      }
+    }
+    .tipo__operacion {
+      max-width: 150px;
+      min-width: 150px;
+    }
+    .razon-social__operacion {
+      max-width: 150px;
+      min-width: 150px;
+    }
+    .fecha__operacion {
+      width: 150px;
+    }
+    .motivo-rechazo__operacion {
+      max-width: 250px;
+      min-width: 250px;
+      .error-documento {
+        max-width: 100% !important;
+      }
+      .pendiente-documento {
+        max-width: 100% !important;
+      }
+    }
+  }
+  @include for-laptops {
+    margin-top: 12px;
+    .p-datatable .p-datatable-tbody > tr {
+      display: flex;
+      justify-content: flex-start;
+      .tipo__documento {
+        min-width: 15rem;
+        flex: 4;
+      }
+      .fecha__documento {
+        flex: 1;
+      }
+      .motivo-rechazo__documento {
+        width: 17rem;
+        flex: 4;
+        .error-documento {
+          max-width: 100% !important;
+          text-align: center !important;
+        }
+        .pendiente-documento {
+          max-width: 100% !important;
+          text-align: center !important;
+        }
+      }
+      .tipo__operacion {
+        flex: 2;
+        min-width: 10rem;
+        max-width: 10rem;
+      }
+      .razon-social__operacion {
+        flex: 4;
+        max-width: 150px;
+        min-width: 150px;
+      }
+      .fecha__operacion {
+        width: 150px;
+      }
+      .motivo-rechazo__operacion {
+        max-width: 300px;
+        min-width: 300px;
+        flex: 4;
+        .error-documento {
+          max-width: 100% !important;
+          text-align: center !important;
+        }
+        .pendiente-documento {
+          max-width: 100% !important;
+          text-align: center !important;
+        }
+      }
+      .actions__container {
+        padding-right: 0px;
+        flex: 1;
+        justify-content: flex-end;
+      }
+    }
+  }
+  @include for-tablet {
+    padding: 5px;
+    .p-datatable .p-datatable-tbody > tr {
+      display: flex;
+      justify-content: flex-start;
+      .tipo__documento {
+        min-width: 10rem;
+        flex: 5;
+        padding-left: 5px;
+      }
+      .fecha__documento {
+        display: none;
+      }
+      .motivo-rechazo__documento {
+        flex: 4;
+      }
+      .tipo__operacion {
+        flex: 2;
+        min-width: 10rem;
+        max-width: 10rem;
+      }
+      .razon-social__operacion {
+        flex: 4;
+        max-width: 150px;
+        min-width: 150px;
+      }
+      .fecha__operacion {
+        flex: 2;
+      }
+      .motivo-rechazo__operacion {
+        flex: 4;
+        min-width: 300px;
+      }
+      .actions__container {
+        flex: 1;
+        padding-right: 0px;
+      }
+    }
+  }
+  @include for-phone {
+    .header-table {
+      margin-bottom: 20px !important;
+    }
+    .p-datatable .p-datatable-tbody > tr {
+      margin-right: 10px;
+      .tipo__documento {
+        width: 10rem;
+        flex: 5;
+      }
+      .motivo-rechazo__documento {
+        min-width: 150px;
+        max-width: 150px;
+        flex: 5;
+      }
+      .tipo__operacion {
+        flex: 2;
+        min-width: 100px;
+        max-width: 100px;
+      }
+      .razon-social__operacion {
+        flex: 4;
+        min-width: 150px;
+        max-width: 150px;
+      }
+      .fecha__operacion {
+        flex: 2;
+      }
+      .motivo-rechazo__operacion {
+        flex: 3;
+        min-width: 150px;
+        max-width: 150px;
+      }
+      .actions__container {
+        flex: 2;
+      }
+    }
+    > div {
+      max-width: 100%;
+      flex: none;
+      .table-card {
+        padding: 10px;
+      }
+    }
+    .p-datatable-wrapper * {
+      font-size: 0.75rem !important;
+    }
+    .p-tooltip-text {
+      font-size: 0.3rem !important;
+    }
+  }
+  .p-datatable .p-datatable-tbody > tr {
+    .tipo__documento {
+      min-width: 15rem;
+      flex: 4;
+    }
+    .fecha__documento {
+      flex: 1;
+    }
+    .motivo-rechazo__documento {
+      width: 17rem;
+      flex: 4;
+      .error-documento {
+        max-width: 100% !important;
+        text-align: center !important;
+      }
+      .pendiente-documento {
+        max-width: 100% !important;
+        text-align: center !important;
+      }
+    }
+  }
+}
+
+.datatable-app {
+  @include for-phone {
+    tr {
+      display: grid !important;
+      span {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.modal__container {
+  &.enviar-pagare-dialog {
+    .modal__content {
+      max-height: fit-content;
+    }
+    .alerta-enviar-pagare {
+      color: #004ad1;
+      background-color: #e5edfa;
+      border: 1px;
+      border-color: #80a4e8;
+      border-style: solid;
+      .icono-alerta-enviar-pagare {
+        .svg-inline--fa {
+          height: 1.5em;
+        }
+      }
+    }
+  }
+}

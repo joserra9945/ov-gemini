@@ -1,0 +1,57 @@
+$HEADER_HEIGHT: 90px;
+$FOOTER_HEIGHT: 57px;
+
+.efectos-asociados-cesiones__container {
+  height: 100%;
+  padding: 40px;
+  .g-data-table__containter {
+    height: auto;
+  }
+  .p-datatable {
+    .p-datatable-scrollable-wrapper {
+      height: calc(100% - $HEADER_HEIGHT);
+      .p-datatable-scrollable-view {
+        height: 100%;
+        .p-datatable-scrollable-body {
+          max-height: unset !important;
+          height: calc(100% - $FOOTER_HEIGHT) !important;
+        }
+      }
+    }
+    .p-paginator {
+      border-bottom: none;
+    }
+  }
+  .p-selection-column {
+    width: 3em;
+  }
+  .summary-footer__container {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .importe-total {
+      font-weight: 500;
+      margin-right: 32px;
+    }
+  }
+  .turbo-table__header
+    .turbo-table__header-left-section
+    .turbo-table__header-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #495057;
+  }
+  .custom-header__container {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    .custom-header__left {
+      font-weight: 500;
+      line-height: 19px;
+    }
+  }
+}

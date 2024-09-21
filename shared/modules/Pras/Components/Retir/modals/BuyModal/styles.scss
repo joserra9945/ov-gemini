@@ -1,0 +1,45 @@
+@import '../../styles.scss';
+@import '../styles.scss';
+
+.retir-buy__modal {
+    @include retir-modal();
+
+    .modal__content {
+        @include retir-modal-content();
+
+        .retir-buy-content {
+            width: 457px;
+
+            > div:nth-of-type(1) {
+                @include retir-font(#0069AA, 22px, 20px, 500);
+            }
+
+            > div:nth-of-type(2) {
+                @include retir-font(#212121, 22px, 20px, 500);
+            }
+
+            > div:nth-of-type(3) {
+                @include retir-font(#212121, 22px, 14px, 500);
+            }
+
+            > div:nth-of-type(4) {
+                background: #F8F8F8;
+                div span {
+                    @include retir-font(#212121, 22px, 16px, 500);
+                }
+            }
+
+            > div:nth-of-type(5) {
+
+                > button:nth-of-type(1) {
+                    background: #FFFFFF;
+                    color: #212121;
+                }
+
+                > button:nth-of-type(2) {
+                    background: #30D59B;
+                }
+            }
+        }
+    }
+  }

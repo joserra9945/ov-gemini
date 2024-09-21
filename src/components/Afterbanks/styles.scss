@@ -1,0 +1,65 @@
+@import '../../styles/component-styles.scss';
+
+.iframe-afterbanks {
+  height: 100%;
+  border: none;
+  margin-bottom: 1%;
+  @include for-phone {
+    width: 100%;
+  }
+}
+
+#close-iframe {
+  display: none;
+}
+
+.button-guardar-afterbanks {
+  margin-top: 20px !important;
+  width: 140px;
+}
+
+.search-form {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1%;
+  form,
+  .form {
+    width: 100%;
+    label {
+      margin-top: 15px;
+      text-align: left;
+    }
+  }
+  &.manual-selected {
+    height: 60vh;
+  }
+}
+
+.form-ccc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.afterbanks-input-iban {
+  width: 100%;
+}
+
+.lupa-icono-search {
+  white-space: nowrap;
+  span {
+    margin: 0px 15px;
+  }
+}
+
+.description {
+  text-align: center;
+  h3 {
+    margin-top: 1%;
+  }
+}

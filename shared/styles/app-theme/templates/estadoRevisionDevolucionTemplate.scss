@@ -1,0 +1,14 @@
+// Pendiente = 1, Validado = 2, Rechazado = 3
+
+@import '../../mixins';
+@import '../../variables';
+
+.estado-revision-devolucionDePagare-1 {
+  @include estado-box-format($pendiente-font-color);
+}
+.estado-revision-devolucionDePagare-2 {
+  @include estado-box-format($validado-font-color);
+}
+.estado-revision-devolucionDePagare-3 {
+  @include estado-box-format($estado-rechazado);
+}

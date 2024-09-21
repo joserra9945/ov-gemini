@@ -1,0 +1,4 @@
+[submodule "shared"]
+    path = shared
+    url = ../Front.CommonComponents.git
+    branch = main

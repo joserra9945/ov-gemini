@@ -1,0 +1,43 @@
+@import './bootstrap_variables.scss';
+
+@import './app-styles/app-theme/main.scss';
+@import './variables';
+@import './common';
+@import './states';
+@import './globalResponsive';
+@import './typography';
+@import './animations';
+
+#app-root {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+  .header {
+    display: none;
+  }
+  .sidenav {
+    display: none;
+  }
+  .App {
+    min-height: unset !important;
+  }
+  .card {
+    box-shadow: none;
+    border-radius: unset;
+  }
+}
+
+.main-container {
+  height: calc(100% - 40px);
+  @include for-phone {
+    margin: 0;
+    height: 100%;
+  }
+}
+
+.label-select-button {
+  font-size: 14px;
+}

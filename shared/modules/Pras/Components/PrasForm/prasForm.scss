@@ -1,0 +1,24 @@
+.pras-form-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .pras-form__container-inputs {
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    width: 100%;
+    > .motivo-field {
+      min-width: 30vw;
+      margin-left: 16px;
+    }
+  }
+  .pras-form__container-buttons {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    .back-button {
+      margin-right: 40px;
+    }
+  }
+}

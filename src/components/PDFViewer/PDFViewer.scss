@@ -1,0 +1,15 @@
+@import '../../styles/component-styles.scss';
+
+.pdf-reader {
+  // height: 85vh !important;
+  .rpv-core-canvas-layer,
+  .rpv-core-page-layer,
+  canvas {
+    max-height: 86vh;
+    max-width: 40vw;
+    transform: unset !important;
+  }
+  & > div {
+    height: unset !important;
+  }
+}

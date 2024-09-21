@@ -1,0 +1,11 @@
+enum estadoCesionEnum {
+  PENDIENTE_COMUNICAR = 1,
+  COMUNICADA,
+  ACEPTADA_MANUALMENTE,
+  ACEPTADA,
+  CANCELADA,
+  FINALIZADA,
+  RECHAZADA,
+}
+
+export { estadoCesionEnum };

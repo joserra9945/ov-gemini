@@ -1,0 +1,88 @@
+@import '../../../../../styles/component-styles.scss';
+.anyadir-doc__container {
+  // padding: 20px 50px;
+  .anyadir-doc-filepond {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    .filepond--drop-label {
+      background: #f9fafb;
+    }
+    .filepond--panel-center.filepond--panel-root {
+      background: #f9fafb;
+    }
+    .filepond-container {
+      min-height: 350px;
+      background: #f9fafb;
+      border: 2px dashed #dddfe2;
+      overflow: auto;
+    }
+    .fila-activa {
+      border: 5px solid #87cbf4;
+      overflow: hidden;
+    }
+  }
+
+  .anyadir-doc-filepond--row {
+    margin-top: unset;
+    .filepond-container {
+      margin: 0 auto !important;
+      min-height: 45rem;
+      overflow: auto;
+    }
+  }
+
+  .anyadir-dni {
+    margin-top: 30px;
+    .subida-dni-container {
+      & .card:first-of-type {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include for-laptops-and-rest {
+          height: unset;
+        }
+      }
+    }
+  }
+
+  @include for-laptops-and-rest {
+    height: unset;
+    .p-dropdown .p-dropdown-panel {
+      width: 100%;
+      left: unset;
+    }
+  }
+
+  @include for-tablet {
+    .anyadir-doc-filepond > .filepond-container {
+      min-height: 0px;
+      margin-bottom: 1rem !important;
+    }
+    .filepond--drop-label {
+      display: flex !important;
+    }
+    .filepond--wrapper {
+      width: 100% !important;
+    }
+    padding: 0.5rem !important;
+  }
+
+  @include for-phone {
+    * {
+      font-size: 0.75rem !important;
+    }
+    .anyadir-doc-filepond > .filepond-container {
+      min-height: 0px;
+      margin-bottom: 1rem !important;
+    }
+    .filepond--drop-label {
+      display: flex !important;
+    }
+    .filepond--wrapper {
+      width: 100% !important;
+    }
+    padding: 0.5rem !important;
+  }
+}

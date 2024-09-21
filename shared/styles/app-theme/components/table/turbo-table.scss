@@ -1,0 +1,229 @@
+.p-datatable {
+  .p-datatable-wrapper {
+    table {
+      td:first-child,
+      th:first-child {
+        padding-left: 2%;
+      }
+      td:last-child,
+      th:last-child {
+        padding-right: 2%;
+      }
+    }
+  }
+}
+.with-no-header {
+  .p-datatable-thead {
+    display: none;
+  }
+}
+.with-turbo-filters,
+.without-turbo-filters {
+  .p-column-filter {
+    display: none;
+  }
+}
+.mouse-grabbing {
+  cursor: grabbing;
+  user-select: none;
+  .p-selectable-row {
+    cursor: inherit;
+  }
+}
+.turbo-table__header {
+  .turbo-table__header-left-section {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    width: 50%;
+    .turbo-table__header-title {
+      color: $primary;
+      font-size: 21px;
+      font-weight: 500;
+    }
+    .p-multiselect .p-multiselect-label {
+      padding: 0.25rem 1.5rem;
+    }
+    & > *:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+  .turbo-table__header-right-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    & > *:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+  .turbo-table__filter {
+    display: flex;
+    align-items: center;
+    .turbo-table__filter-button,
+    .turbo-table__filter-button-clear {
+      box-shadow: none;
+      &:hover {
+        box-shadow: none !important;
+      }
+      svg {
+        path {
+          stroke-width: 50px;
+          stroke: $primary;
+          fill: transparent;
+          transform: scale(1.15);
+        }
+      }
+    }
+    .turbo-table__filter-button-clear {
+      color: #495057;
+      svg {
+        path {
+          stroke: #495057;
+        }
+      }
+    }
+    .turbo-table__filter-button-container {
+      position: relative;
+      .turbo-table__filter-button-slash {
+        width: 30px;
+        border: 1px solid red;
+        position: absolute;
+        top: 13px;
+        left: 17px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .turbo-table__column-filter-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 3px;
+    svg {
+      path {
+        fill: $primary;
+      }
+    }
+  }
+}
+.turbo-table__overlaypanel {
+  width: auto;
+  max-width: 450px;
+  padding: 0.5em 1em;
+  border-radius: 9px;
+  overflow: hidden;
+
+  .p-field-checkbox {
+    display: flex;
+    align-items: center;
+    .p-checkbox {
+      margin-right: 10px !important;
+    }
+    label {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// TABS
+.p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
+  padding: 1rem 1.6rem;
+  border-width: 0 0 5px 0;
+}
+
+.p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
+  border: solid;
+  border-width: 0 0 5px 0;
+  border-color: $primary;
+  color: $primary;
+}
+
+// DATE-PICKER
+.p-datepicker-header {
+  display: flex;
+}
+
+.input-calendar_close-icon__container {
+  order: 4;
+}
+
+// TABLE-SELECT
+.select-button-wrapper {
+  padding: 5px;
+  background-color: #f2f5f7;
+  border-radius: 5px;
+
+  .p-selectbutton .p-button.p-component {
+    background-color: #f2f5f7;
+    color: #cbcbcb;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+
+    &.p-highlight {
+      background-color: white;
+      color: $primary;
+      box-shadow: 0 0 2.2px rgba(0, 0, 0, 0.014), 0 0 5.3px rgba(0, 0, 0, 0.028);
+
+      &:hover {
+        background-color: none;
+        border: none;
+      }
+
+      &.p-focus {
+        border: none;
+      }
+
+      .button-select svg {
+        color: $primary;
+      }
+    }
+
+    &:not(.p-highlight) {
+      &:hover {
+        background: #e9ecef;
+        border-color: #ced4da;
+        color: #495057;
+        svg {
+          color: #495057;
+        }
+      }
+    }
+
+    .button-select {
+      display: flex;
+      align-items: center;
+
+      svg {
+        height: 16px;
+        width: 16px;
+        margin-right: 10px;
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+// TABLE RANGE NUMBER
+.g-number-range {
+  .p-inputnumber-input {
+    width: 45%;
+    &:first-child {
+      margin-right: 3px;
+    }
+    &:last-child {
+      margin-left: 3px;
+    }
+  }
+}

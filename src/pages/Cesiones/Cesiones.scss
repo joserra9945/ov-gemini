@@ -1,0 +1,30 @@
+@import '../../styles/component-styles.scss';
+
+$HEADER_HEIGHT: 187px;
+$FOOTER_HEIGHT: 57px;
+.cesiones-page__container {
+  height: 100%;
+  .alerta-firma__container,
+  .g-messages {
+    margin-bottom: 24px;
+  }
+
+  .alerta-firma__container {
+    @include for-tablet {
+      tr {
+        display: flex;
+      }
+    }
+  }
+
+  .g-data-table__containter {
+    .p-datatable {
+      height: 100%;
+      .p-datatable-scrollable-wrapper {
+        .p-datatable-scrollable-view {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+/*
+ * Accepted app global variables
+ */
+$defaultFontFamily: 'Roboto,Helvetica, Arial, Verdana, Tahoma, sans-serif';
+// Header related vars
+$header-height: 70px;
+$header-box-shadow: 0px 2px 4px -2px #00000017, 0px 1px 18px -1px #00000017;
+$header-background-color: white;
+
+$default-padding: 20px;
+
+// ESTADO COLORS
+
+// EstadoEstudio
+// 0 = Pendiente, 1 = En estudio, 2 = Cerrado
+
+// EstadoFinanciacionDocumento
+// 1 = En estudio, 2 = Aprobado, 3 = Denegado, 4 = Perdido
+
+// EstadoFinanciacionEstudio
+// 0 = Pendiente, 1 = Aprobado, 2 = Denegado
+
+// EstadoOperacion
+// 1 = En estudio, 2 = Pendiente de firma, 3 = Pendiente de pago, 4 = Pagada, 5 = Eliminada
+
+// EstadoPago
+// 1 = No autorizado, 2 = Autorizado, 3 = Impreso, 4 = Pagado
+
+// EstadoRevisionDocumento
+// 1 = Pendiente, 2 = Validado, 3 = Rechazado, 4 = Dudoso, 5 = Eliminado
+
+// EstadosCesion
+// 1 = Pendiente de firmar digitalmente, 2 = Firmada digitalmente, 3 = Pendiente de firmar ante notario, 4 = Firma ante notario solicitada, 5 = Contrato generado, 6 = Contrato enviado a notaría, 7 = Firmada ante notario, 8 = Finalizada
+
+$otros: #e3e3e3;
+$pendiente: #fdedc9;
+$dudoso: #fdedc9;
+$pagado: #b1ebc9;
+$validado: #b1ebc9;
+$impreso: #b1ebc9;
+$autorizado: #b1ebc9;
+$firmada: #b1ebc9;
+$en-estudio: #b1ebc9;
+$eliminado: rgb(250, 197, 189);
+$no-autorizado: rgb(250, 197, 189);
+$cerrado: #c6dbe8;
+$aprobado: #30d59b;
+$en-estudio-efecto: #0069aa;
+// $denegado: $caution;
+// $aprobado: $success;
+
+$pendiente-font-color: #ff961c;
+$pendiente-pago-font-color: #ff961c;
+$dudoso-font-color: #f5b44d;
+$pagado-font-color: rgb(60, 173, 60);
+$validado-font-color: rgb(60, 173, 60);
+$impreso-font-color: rgb(60, 173, 60);
+$autorizado-font-color: rgb(60, 173, 60);
+$firmada-font-color: rgb(60, 173, 60);
+$en-estudio-font-color: rgb(60, 173, 60);
+$eliminado-font-color: tomato;
+$no-autorizado-font-color: tomato;
+$nominal: rgba(26, 37, 67, 0.1);
+$pendiente-pago: #e40139;
+$confirmado-pago: #30d59b;
+$rechazado-font-color: #2e2d2d;
+$cerrado-font-color: #046bab;
+$pausada-font-color: #888888;
+$devuelto-font-color: #888888;
+$enviando-contrato: #004ad1;
+$generando-verificacion: #004ad1;
+$parcialmente-pagada: #30d59b;
+$contrato-no-enviado: #C50000;
+$invalidada-font-color: #c50000;
+
+$pendiente-border-color: #f5b44d;
+$pendiente-pago-border-color: #f5b44d;
+$dudoso-border-color: #f5b44d;
+$pagado-border-color: rgb(60, 173, 60);
+$validado-border-color: rgb(60, 173, 60);
+$impreso-border-color: rgb(60, 173, 60);
+$autorizado-border-color: rgb(60, 173, 60);
+$firmada-border-color: rgb(60, 173, 60);
+$en-estudio-border-color: rgb(60, 173, 60);
+$eliminado-border-color: rgb(221, 74, 48);
+$no-autorizado-border-color: rgb(221, 74, 48);
+$rechazado-border-color: #2e2d2d;
+$cerrado-border-color: #046bab;
+
+$pendiente-firmar-digital: #ff961c;
+$firmada-digitalmente: #30d59b;
+$pendiente-firmar-notario: #ff961c;
+$firma-notario-solicitada: #0069aa;
+$solicitud-firma-confirmada: #30d59b;
+$contrato-generado: #0069aa;
+$contrato-enviado-notaria: #30d59b;
+$enviando-contrato-notaria: #0069aa;
+$firmada-notario: #30d59b;
+$finalizada: rgb(60, 173, 60);
+$validada: rgb(60, 173, 60);
+$no-enviado: #0069aa;
+$pendiente-verificar: #0069aa;
+$admitido: rgb(60, 173, 60);
+$rechazado: #c50000;
+$no-generada-modal: #888888;
+$pendiente-enviar: #ffb200;
+$no-enviada-modal: #ff961c;
+$error-envio-modal: #c50000;
+$enviada-modal: #004ad1;
+$recibida-modal: #ff961c;
+$verificado-modal: #30d59b;
+$pendiente-validar: #ffb200;
+$no-verificada: #ffb200;
+$pendiente-firmar-librador: #ffb200;
+$pendiente-firmar-organismo-publico: #0069aa;
+$firmada: #5ddc90;
+$enviando: #2d9ede;
+$creada: #ff961c;
+$comunicada: #004ad1;
+$aceptada-librado: #0069aa;
+$aceptada-manual: #0069aa;
+$rechazada-cesion: #e40139;
+$finalizada-cesion: #30d59b;
+$rechazada: #c50000;
+$verificacion-recibida: #5ddc90;
+$verificacion-aceptada: #5ddc90;
+$verificacion-no-generada: #ffb200;
+$verificacion-error: #c50000;
+$verificacion-varios: black;
+
+$fecha-impago: #e40139;
+
+// Nuevos estados Burofax
+
+$enviando-burofax: #ff961c;
+$pendiente-burofax: #ff961c;
+$rechazado-burofax: #e40139;
+$admitido-burofax: #30d59b;
+$finalizada-burofax: #0069aa;
+$no-enviado-burofax: #00bec2;
+
+// Nuevos estados firma
+$firma-digital-enviada: #0069aa;
+$firmado-digitalmente: #30d59b;
+$firma-digital-cancelada: #e40139;
+$firma-digital-rechazada: #e40139;
+
+$no-aplica: #787878;
+$pendiente-firmar-digital: #ff961c;
+$firma-digital-enviada: #0069aa;
+$firmado-digitalmente: #30d59b;
+$firma-digital-cancelada: #e40139;
+$firma-digital-rechazada: #e40139;
+$pendiente-firmar-notario: #ff961c;
+$firmada-notario: #30d59b;
+
+// Estados documento aplazamiento
+
+$sin-abonar: #004ad1;
+$abonado: #30d59b;
+
+// Tipos documentos
+
+$factura: #004ad1;
+$pagare: #30d59b;
+$otros: #ff961c;
+
+$ingreso-pendiente: #ff961c;
+$ingreso-en-curso: #004ad1;
+$ingreso-finalizado: #30d59b;
+$en-revision: #0069aa;
+$estado-rechazado: #e40139;
+
+// Documentacion requerida
+
+$documentacion-pendiente: #0069aa;
+
+// Estados pagos:
+
+$pendiente-pago-pagos: #ff961c;
+$no-autorizado-pago-pagos: #e40139;
+$impreso-pagos: #0069aa;
+$autorizado-pagado-ingresado-pagos: #30d59b;
+
+// Estado remesas:
+$remesa-pendiente: #ff961c;
+$remesa-confirmada: #30d59b;
+
+// Estados fondos:
+
+$estado-fondo-pendiente: #ff961c;
+$estado-fondo-curso: #004ad1;
+$estado-fondo-finalizado: #30d59b;

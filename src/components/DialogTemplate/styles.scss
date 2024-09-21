@@ -1,0 +1,98 @@
+@import '../../styles/component-styles.scss';
+
+.g-dialog {
+  width: 50vw;
+}
+
+.p-dialog-footer {
+  .p-button-text-no {
+    float: left;
+    width: 48% !important;
+    height: 50px;
+    &:not(.g-button) {
+      opacity: 0.8;
+      color: white !important;
+      background-color: $button-cancel-option-background-color !important;
+
+      &:hover {
+        background-color: $button-cancel-option-background-hover !important;
+      }
+    }
+
+    @include for-phone {
+      width: 100% !important;
+    }
+  }
+
+  .p-button-text-yes {
+    float: right;
+    width: 48% !important;
+    height: 50px;
+    &:not(.g-button) {
+      opacity: 0.8;
+      color: white !important;
+      background-color: $button-caution-option-background-color !important;
+
+      &:hover {
+        background-color: $button-caution-option-background-hover !important;
+      }
+    }
+
+    @include for-phone {
+      width: 100% !important;
+    }
+  }
+}
+.delete-documento {
+  .p-dialog-footer {
+    .p-button {
+      @include for-phone {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.botonera-modal-container {
+  display: flex;
+  justify-content: flex-end;
+  .p-button-motivo-cancelar {
+    width: 20%;
+    border: none;
+    color: #0069aa;
+    @include for-phone {
+      width: 100%;
+    }
+
+    &.p-button.p-button-text:hover {
+      opacity: 1;
+      box-shadow: none;
+      background: none;
+    }
+  }
+
+  .p-button-motivo-ok {
+    &.p-button.p-button-text {
+      width: 170px;
+      height: 48px;
+      background-color: #e40139;
+      color: #ffffff;
+      border-radius: 6px;
+      margin-left: 20px;
+      &:hover {
+        opacity: 1;
+        box-shadow: none;
+        background-color: #e40139;
+        color: #ffffff;
+        @include for-phone {
+          width: 100%;
+        }
+      }
+      .p-button-label {
+        margin: 0px 8px;
+      }
+    }
+  }
+}

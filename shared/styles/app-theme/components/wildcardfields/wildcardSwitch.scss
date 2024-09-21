@@ -1,0 +1,14 @@
+.g-field {
+  &.g-input-switch {
+    .p-fluid {
+      .p-field {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .p-inputswitch {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

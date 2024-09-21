@@ -1,0 +1,9 @@
+.g-input-wrapper {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 400;
+  @import "./input-text.scss";
+}
+
+@import "./input-tag.scss";

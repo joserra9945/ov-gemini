@@ -1,0 +1,46 @@
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 32px;
+  .header__container--left {
+    display: flex;
+    align-items: center;
+    .g-button.g-button.g-button-primary-contained.g-button-xl.icon-only-button.g-button-link {
+      &.back-button {
+        color: rgb(0, 0, 0);
+        &:hover {
+          color: rgba(0, 0, 0, 0.699);
+        }
+      }
+    }
+    .title {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+  .header__container--right {
+    display: flex;
+    align-items: center;
+    .assignament-summary__container {
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 20px;
+      .assignament-type__value {
+        margin-right: 4px;
+      }
+      .assignament-amount__value {
+        margin-left: 4px;
+      }
+    }
+    .assignament-state-singing__value {
+      margin-left: 24px;
+      .estado-cesion {
+        font-size: 16px;
+      }
+    }
+    .btn-cesion--complete {
+      margin-left: 24px;
+    }
+  }
+}

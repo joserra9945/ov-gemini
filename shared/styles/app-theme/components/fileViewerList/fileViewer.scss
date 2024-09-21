@@ -1,0 +1,133 @@
+.file-viewer__container {
+  background: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  padding: 12px 24px;
+  margin-bottom: 12px;
+  .file-viewer__left {
+    .file-viewer__info-icon {
+      width: 32px;
+      height: 24px;
+      margin-right: 12px;
+      color: #0d467c;
+      path {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .file-viewer__info-main {
+      .file-viewer__info-title {
+        font-size: 14px;
+        color: #000;
+        line-height: 19px;
+        font-weight: 600;
+      }
+      .file-viewer__info-size {
+        font-size: 12px;
+        line-height: 24px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  .file-viewer__right {
+    .g-tooltip_trigger {
+      margin-left: 12px;
+      button[class*='file-viewer__actions-button'] {
+        &.g-button {
+          width: 40px !important;
+          height: 40px;
+          border-radius: 50%;
+          box-shadow: none;
+          svg {
+            width: 20px;
+            height: 20px;
+            path {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          &:not(.g-button-link) {
+            box-shadow: none;
+          }
+        }
+      }
+      .file-viewer__actions-button--show {
+        background: rgba(0, 190, 194, 0.1);
+        &:hover {
+          background: rgba(0, 190, 194, 0.2) !important;
+        }
+        svg {
+          color: #00bec2;
+        }
+      }
+      .file-viewer__actions-button--remove {
+        background: rgba(228, 1, 57, 0.1);
+        &:hover {
+          background: rgba(228, 1, 57, 0.2) !important;
+        }
+        svg {
+          color: #e40139;
+        }
+      }
+    }
+  }
+}
+
+.react-viewer {
+  .react-viewer-footer {
+    .react-viewer-toolbar {
+      display: flex;
+      justify-content: center;
+      .react-viewer-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .react-viewer-icon-zoomIn {
+          &::before {
+            content: url(./assets/plus-light.svg);
+          }
+        }
+        .react-viewer-icon-zoomOut {
+          &:before {
+            content: url(./assets/hyphen-light.svg);
+          }
+        }
+        .react-viewer-icon-prev {
+          &:before {
+            content: url(./assets/arrow-left-light.svg);
+          }
+        }
+        .react-viewer-icon-reset {
+          &:before {
+            content: url(./assets/clock-rotate-left-light.svg);
+          }
+        }
+        .react-viewer-icon-next {
+          &:before {
+            content: url(./assets/arrow-right-light.svg);
+          }
+        }
+        .react-viewer-icon-rotateLeft {
+          &:before {
+            content: url(./assets/arrow-rotate-left-light.svg);
+          }
+        }
+        .react-viewer-icon-rotateRight {
+          &:before {
+            content: url(./assets/arrow-rotate-right-light.svg);
+          }
+        }
+        .react-viewer-icon-scaleX {
+          &:before {
+            content: url(./assets/arrows-left-right-light.svg);
+          }
+        }
+        .react-viewer-icon-scaleY {
+          &:before {
+            content: url(./assets/arrows-up-down-light.svg);
+          }
+        }
+      }
+    }
+  }
+}

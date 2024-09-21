@@ -1,0 +1,100 @@
+.PhoneInput {
+  @apply flex items-center h-10 p-0 m-0 w-full text-gray-600 bg-white border border-gray-300 transition-colors duration-200 appearance-none rounded-lg;
+
+  &.PhoneInput--focus {
+    @apply outline-0 outline-none outline-offset-0 border-[#2196f3] shadow-[0_0_0_0.2rem_#a6d5fa];
+  }
+
+  &:hover {
+    @apply border-[#2196f3];
+  }
+
+  &.PhoneInput--invalid {
+    @apply outline-0 outline-none outline-offset-0 border-[#f44336] shadow-[0_0_0_0.2rem_#a6d5fa];
+  }
+
+  &.PhoneInput-invalid {
+    @apply border-[#f44336];
+  }
+
+  .PhoneInputCountry {
+    @apply bg-[#f8f8f8] w-[55px] py-2.5 pr-0 pl-2.5 border-r border-solid	border-[#e2e2e2] rounded-[8px_0_0_8px];
+
+    .PhoneInputCountryIcon {
+      &.PhoneInputCountryIcon--border {
+        @apply bg-[unset] shadow-none w-[20px] h-[20px] relative overflow-hidden  rounded-[50%];
+
+        img {
+          @apply w-auto h-full mx-auto my-0;
+        }
+      }
+    }
+  }
+
+  .PhoneInputInput {
+    @apply border-none;
+    &:focus-visible {
+      @apply border-none outline-none shadow-none;
+    }
+  }
+}
+
+.PhoneInputInput {
+  @apply flex-[1] min-w-0;
+}
+
+.PhoneInputCountryIcon {
+  @apply w-[1.5em] h-[1em];
+}
+
+.PhoneInputCountryIcon--square {
+  @apply w-[1em];
+}
+
+.PhoneInputCountryIcon--border {
+  @apply bg-[rgba(0,0,0,0.1)] shadow-[0_0_0_1px_rgba(0,0,0,0.5)] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.5)];
+}
+
+.PhoneInputCountryIconImg {
+  @apply block w-full h-full;
+}
+
+.PhoneInputInternationalIconPhone {
+  @apply opacity-80;
+}
+
+.PhoneInputInternationalIconGlobe {
+  @apply opacity-[0.65];
+}
+
+.PhoneInputCountry {
+  @apply relative self-stretch flex items-center;
+}
+
+.PhoneInputCountrySelect {
+  @apply absolute top-0 left-0 h-full w-full z-[1] border-0 opacity-0 cursor-pointer;
+}
+
+.PhoneInputCountrySelect[disabled] {
+  @apply cursor-default;
+}
+
+.PhoneInputCountrySelectArrow {
+  @apply block content-[''] border-solid border-t-0 border-l-0 w-[0.3em] h-[0.3em] ml-[0.35em] border-inherit border-b border-r rotate-45	opacity-[0.45];
+}
+
+.PhoneInputCountrySelect:focus
+  + .PhoneInputCountryIcon
+  + .PhoneInputCountrySelectArrow {
+  @apply opacity-100 text-[#03b2cb];
+}
+
+.PhoneInputCountrySelect:focus + .PhoneInputCountryIcon--border {
+  @apply shadow-[0_0_0_1px_#03b2cb] shadow-[inset_0_0_0_1px_#03b2cb];
+}
+
+.PhoneInputCountrySelect:focus
+  + .PhoneInputCountryIcon
+  .PhoneInputInternationalIconGlobe {
+  @apply opacity-100 text-[#03b2cb];
+}

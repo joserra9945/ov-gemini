@@ -1,0 +1,31 @@
+.g-input-text {
+  padding: 12px 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  border: 1px $secondary solid;
+  border-radius: 3px;
+  transition: box-shadow 0.2s, border 0.3s;
+  color: $typography-color;
+  &:hover {
+    transition: border 0.3s;
+    border: 1px $accent solid;
+  }
+  &:focus {
+    border: 1px $accent solid;
+    transition: box-shadow 0.2s, border 0.3s;
+    box-shadow: 0 0 0 0.1rem $accent-hover;
+    outline: 0 none;
+    outline-offset: 0;
+  }
+  &--error {
+    border: 1px $danger solid;
+  }
+
+  &--dirty {
+    border: 1px black solid;
+  }
+
+  &--valid {
+    border: 1px $info solid;
+  }
+}

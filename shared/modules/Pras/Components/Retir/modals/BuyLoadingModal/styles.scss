@@ -1,0 +1,27 @@
+@import '../../styles.scss';
+@import '../styles.scss';
+
+.retir-buy-loading__modal {
+    @include retir-modal();
+
+    .modal__content {
+        @include retir-modal-content();
+
+        .retir-buy-loading-content {
+            width: 457px;
+            height: 401px;
+        
+            > div:nth-of-type(1) {
+                @include retir-font(#0069AA, 40px, 32px,700);
+            }
+
+            .p-progressbar {
+                width: 80%;
+                height: 36px;
+                border: 4px solid #0069AA;
+                border-radius: 4px;
+                background: #FFFFFF;
+            }
+        }
+    }
+}

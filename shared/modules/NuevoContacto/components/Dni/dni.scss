@@ -1,0 +1,75 @@
+.accordion__DocumentosAsociados {
+  .g-content-wrapper {
+    .info-icon:hover {
+      cursor: pointer;
+    }
+    .ver_ejemplo {
+      font-weight: 500;
+    }
+    .ver_ejemplo:hover {
+      cursor: pointer;
+    }
+    .wildcardfiels__container {
+      .anverso {
+        div.label {
+          margin-left: 10px;
+          font-weight: 600;
+        }
+      }
+      .reverso {
+        div.label {
+          margin-left: 10px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+.modal__container {
+  &.dni-ejemplo-dialog {
+    width: 61rem;
+    .modal__content {
+      .dni-content {
+        display: flex;
+        @media (max-width: 480px) {
+          display: contents;
+        }
+        .dni-anverso-content {
+          .title {
+            font-weight: 600;
+            margin-bottom: 5px;
+          }
+          .sub-title {
+            span {
+              color: black;
+              font-weight: 500;
+            }
+          }
+          .dni-anverso-image {
+            margin-top: 5%;
+            margin-bottom: 5%;
+          }
+        }
+        .dni-reverso-content {
+          .title {
+            font-weight: 600;
+            margin-bottom: 5px;
+          }
+          .sub-title {
+            span {
+              color: black;
+              font-weight: 500;
+            }
+          }
+          .dni-reverso-image {
+            margin-top: 5%;
+            margin-bottom: 2%;
+          }
+          .lista-reverso {
+            font-weight: lighter;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+# build of Gefintech Gestion Front for production environment. This build runs as a change in the branch master.
+
+name: "$(date:yy.MM.dd)$(rev:.r)"
+
+# Disable the CI trigger.
+trigger:
+  batch: true
+  branches:
+    include:
+    - release/*
+
+pool:
+  name: Default
+  # TODO - temporary agent while setting authentication on backup.
+  demands:
+    - Agent.ComputerName -equals DEVOPS01
+
+resources:
+  repositories:
+    - repository: DevOpsCommon
+      type: git
+      name: "Gefintech/DevOpsCommon"
+
+variables:
+  - group: Finanway_Cliente_Frontend_Release_PRD
+
+  - name: 'system_accesstoken'
+    value: '$(System.AccessToken)'
+
+stages:
+  - template: Templates/node/Builds/NodeCoreReleaseBuild.yml@DevOpsCommon
+    parameters:
+      # Development Environment Parameters
+      EnvironmentName: 'production'
+      NodeVersions: $(NodeVersions)
+      SubmoduleAccess: true
+      InstallLegacy: false
+      Token: $(Token)
+      UrlSubmodule: $(UrlSubmodule)
+      InstallStandard: true
+      ContentsToDeleteWhenDeploying: |
+        **
+        !gestion/**
+        !tarificador/**
+        !tarificador3/**
+        !tarificador2/**
+        !index2.html
+        !mantenimiento.html
+        !web.config
+      ContentsForBackup: |
+        **
+        !gestion/**
+        !tarificador/**
+        !tarificador3/**
+        !tarificador2/**
+        !index2.html
+
+      DeploymentEnvironments:
+        -
+          WebsiteServerPath: $(WebsiteServerPath_PRD)
+          AdminUserDev: $(AdminUser_PRD)
+          AdminPasswdDev: $(AdminPasswd_PRD)
+          ServerIpDev: $(ServerIP_PRD)
+          EnvironmentName: 'production'
+          backupPath: $(backupPath_PRD)

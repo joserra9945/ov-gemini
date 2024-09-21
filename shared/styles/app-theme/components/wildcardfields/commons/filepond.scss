@@ -1,0 +1,55 @@
+.filepond__container {
+  .filepond--drop-label {
+    color: black;
+    border: 1px dashed #d4d4d4;
+    background: #ffffff;
+    border-radius: unset;
+    margin-bottom: 12px;
+    display: block;
+    overflow: auto;
+    .fp-label {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .upload-icon {
+        font-size: 40px;
+        line-height: 24px;
+        color: #0d467c;
+        font-weight: 500;
+        margin-right: 24px;
+        @include for-phone {
+          margin-right: 0;
+        }
+      }
+      .fp-label--right {
+        font-size: 18px;
+        line-height: 24px;
+        .filepond--label-action {
+          color: #0d467c;
+          text-decoration-color: #0d467c;
+          font-weight: 500;
+        }
+      }
+      @include for-phone {
+        flex-direction: column;
+      }
+    }
+  }
+  .filepond--panel-root {
+    background-color: unset;
+  }
+  .filepond--root {
+    margin-bottom: 12px;
+    .filepond--credits {
+      display: none;
+    }
+    .filepond--list-scroller {
+      display: none;
+    }
+  }
+  &.--max-files {
+    height: 0;
+  }
+}

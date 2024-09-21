@@ -1,0 +1,122 @@
+@import '../../styles/component-styles.scss';
+.notificaciones-wrapper {
+  &.multiempresa {
+    .g-overlay {
+      min-height: 7rem;
+    }
+    .g-overlay-header {
+      padding: 0;
+      margin-bottom: 10px;
+      .overlay__title {
+        margin-top: 16px;
+        margin-left: 10px;
+      }
+    }
+    .g-RazonSocial {
+      background: $primary;
+      color: #ffffff;
+      min-width: 32px;
+      height: 32px;
+      line-height: 1rem;
+      display: flex;
+      border-radius: 50%;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &.activa {
+        min-width: 48px;
+        min-height: 48px;
+      }
+    }
+    .g-overlay-body {
+      .ant-divider-horizontal {
+        &.user-divider {
+          margin: 5px;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 10px;
+  .marginL5 {
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .grey-label {
+    color: gray;
+    font-size: 12px;
+    font-weight: 100;
+  }
+  .nombre-apellido {
+    margin-top: -10px;
+  }
+}
+
+.container-de-empresas-render {
+  .title-empresa-activa {
+    &.h3 {
+      color: #0069aa;
+      font-size: 21px;
+      font-weight: 500;
+      margin-bottom: 3px;
+      margin-left: 14px;
+    }
+  }
+  .empresa-activa-container-background {
+    background-color: aliceblue;
+  }
+  .lista-empresas {
+    flex-direction: column;
+    margin-left: 12px;
+    .lista-razonSocial-y-logo {
+      display: flex;
+    }
+  }
+  .empresa-activa-container {
+    .empresa-activa {
+      font-weight: 500;
+      margin-left: 10px;
+      margin-top: 3px;
+      font-size: 16px;
+      width: 100%;
+    }
+    .empresa-activa-y-check {
+      display: flex;
+      width: 90%;
+    }
+    display: flex;
+    margin-bottom: 7px;
+    margin-left: 12px;
+  }
+
+  .title-listado-empresas {
+    &.h3 {
+      color: #0069aa;
+      font-size: 21px;
+      font-weight: 500;
+    }
+  }
+  .g-button {
+    span {
+      color: black;
+    }
+    span:hover {
+      transition: 0.5s;
+      color: #0069aa;
+    }
+  }
+}
+.option-item__check {
+  color: #0069aa;
+  margin-left: 6px;
+  margin-top: 7px;
+  justify-content: flex-end;
+}

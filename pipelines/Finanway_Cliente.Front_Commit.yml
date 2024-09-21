@@ -1,0 +1,39 @@
+# Commit build of Gefintech Cliente Front. This build runs as a PR policy in the protected branches.
+# Prevents code that does not compile or pass the tests to be merged on a protected branch.
+
+name: "$(date:yy.MMdd.)$(rev:.r)"
+
+trigger: none
+
+pool:
+  name: Default
+
+resources:
+  repositories:
+    - repository: DevOpsCommon
+      type: git
+      name: "Gefintech/DevOpsCommon"
+
+variables:
+  - group: "SonarQube_Front"
+  - group: "Finanway_Frontend_Commit"
+  
+stages:
+  - template: Templates/node/Builds/NodeCommitBuild.yml@DevOpsCommon
+    parameters:
+      # Development Environment Parameters.
+      NodeVersions: $(NodeVersions)
+      EnvironmentName: 'staging'
+      InstallStandard: true
+      Lint: $(Lint)
+      Test: $(Test)
+      SubmoduleAccess: true
+      Token: $(Token)
+      UrlSubmodule: $(UrlSubmodule)
+
+      # SonarQube parameters.
+      SonarQubeUrl: $(SonarQubeUrl)
+      SonarQubeAccessToken: $(SonarQubeAccessToken)
+      SonarQubeProjectKey: $(GefintechProjectKey)
+      SonarQubeProjectName: $(sonarQubeProjectName)
+      ExecuteExhaustiveAnalysis: false

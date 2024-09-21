@@ -1,0 +1,217 @@
+@import '../../styles/component-styles.scss';
+
+.documentacionRequerida {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card {
+    width: 100%;
+    .header-table {
+      .superior-buttonbar {
+        > .p-button:first-child {
+          margin-right: 20px;
+        }
+      }
+    }
+    @include for-laptops {
+      min-width: 720px;
+      margin-top: 12px;
+      .p-datatable .p-datatable-tbody > tr {
+        display: flex;
+        justify-content: flex-start;
+        .tipo__documento {
+          min-width: 15rem;
+          flex: 4;
+        }
+        .fecha__documento {
+          flex: 1;
+        }
+        .motivo-rechazo__documento {
+          width: 17rem;
+          flex: 4;
+          .error-documento {
+            max-width: 100% !important;
+            text-align: center !important;
+          }
+          .pendiente-documento {
+            max-width: 100% !important;
+            text-align: center !important;
+          }
+        }
+        .tipo__operacion {
+          flex: 2;
+          min-width: 10rem;
+          max-width: 10rem;
+        }
+        .razon-social__operacion {
+          flex: 4;
+          max-width: 150px;
+          min-width: 150px;
+        }
+        .motivo-rechazo__operacion {
+          max-width: 300px;
+          min-width: 300px;
+          flex: 4;
+          .error-documento {
+            max-width: 100% !important;
+            text-align: center !important;
+          }
+          .pendiente-documento {
+            max-width: 100% !important;
+            text-align: center !important;
+          }
+        }
+        .actions__container {
+          padding-right: 0px;
+          flex: 1;
+          justify-content: flex-end;
+        }
+      }
+      .p-datatable.p-datatable-responsive table td {
+        @include for-laptops {
+          width: auto;
+        }
+        @include for-tablet {
+          width: auto;
+        }
+      }
+    }
+    @include for-tablet {
+      padding: 5px;
+      .p-datatable .p-datatable-tbody > tr {
+        display: flex;
+        justify-content: flex-start;
+        .tipo__documento {
+          min-width: 10rem;
+          flex: 5;
+          padding-left: 5px;
+        }
+        .fecha__documento {
+          display: none;
+        }
+        .motivo-rechazo__documento {
+          flex: 4;
+        }
+        .tipo__operacion {
+          flex: 2;
+          min-width: 10rem;
+          max-width: 10rem;
+        }
+        .razon-social__operacion {
+          flex: 4;
+          max-width: 150px;
+          min-width: 150px;
+        }
+        .fecha__operacion {
+          flex: 2;
+        }
+        .motivo-rechazo__operacion {
+          flex: 4;
+          min-width: 300px;
+        }
+        .actions__container {
+          flex: 1;
+          padding-right: 0px;
+        }
+      }
+    }
+    @include for-desktop {
+      > div {
+        max-width: 100%;
+      }
+      .tipo__documento {
+        max-width: 17.5rem;
+      }
+      .motivo-rechazo__documento {
+        max-width: 20rem;
+        .error-documento {
+          max-width: 100% !important;
+          text-align: center !important;
+        }
+        .pendiente-documento {
+          max-width: 100% !important;
+          text-align: center !important;
+        }
+      }
+      .tipo__operacion {
+        max-width: 150px;
+        min-width: 150px;
+      }
+      .razon-social__operacion {
+        max-width: 150px;
+        min-width: 150px;
+      }
+      .fecha__operacion {
+        width: 150px;
+      }
+      .motivo-rechazo__operacion {
+        max-width: 250px;
+        min-width: 250px;
+        .error-documento {
+          max-width: 100% !important;
+        }
+        .pendiente-documento {
+          max-width: 100% !important;
+        }
+      }
+    }
+
+    @include for-laptops-and-rest {
+      > div {
+        max-width: 100%;
+        flex: none;
+      }
+    }
+
+    @include for-phone {
+      .header-table {
+        margin-bottom: 20px !important;
+      }
+      .p-datatable .p-datatable-tbody > tr {
+        margin-right: 10px;
+        .tipo__documento {
+          width: 10rem;
+          flex: 5;
+        }
+        .motivo-rechazo__documento {
+          width: 8rem;
+          flex: 5;
+        }
+        .tipo__operacion {
+          flex: 2;
+          min-width: 100px;
+          max-width: 100px;
+        }
+        .razon-social__operacion {
+          flex: 4;
+          min-width: 150px;
+          max-width: 150px;
+        }
+        .fecha__operacion {
+          flex: 2;
+        }
+        .motivo-rechazo__operacion {
+          flex: 3;
+          min-width: 150px;
+          max-width: 150px;
+        }
+        .actions__container {
+          flex: 2;
+        }
+      }
+      > div {
+        max-width: 100%;
+        flex: none;
+        .table-card {
+          padding: 10px;
+        }
+      }
+      .p-datatable-wrapper * {
+        font-size: 0.75rem !important;
+      }
+      .p-tooltip-text {
+        font-size: 0.3rem !important;
+      }
+    }
+  }
+}

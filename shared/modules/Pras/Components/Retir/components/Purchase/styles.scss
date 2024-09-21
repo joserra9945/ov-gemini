@@ -1,0 +1,29 @@
+@import '../../styles.scss';
+
+.retir-purshase {
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 1px 4px rgba(33, 33, 52, 0.1);
+    font-weight: 500;
+
+    .retir-purchase-title {
+        @include retir-font(#212121, 21px, 18px, 500);
+        text-transform: uppercase;
+    }
+
+    .retir-purchase-button {
+        background: #30D59B;
+    }
+
+    .retir-purchase-detail {
+        font-weight: 400;
+        min-width: 100px;
+    }
+
+    &__no-data {
+        height: 540px;
+        span {
+            @include retir-font(#0069AA, 32px, 38px, 600);
+        }
+    }
+}

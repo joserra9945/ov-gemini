@@ -1,0 +1,32 @@
+// Global vars
+$global-border-radius: 5px;
+$global-font-color: $typography-color;
+$global-font-size: 16px;
+
+// Button related vars
+$button-border-radius: 5px;
+$button-font-size: 16px;
+$button-disabled: $disabled-option;
+$button-primary-option-background: $primary;
+$button-primary-option-background-hover: $primary-hover;
+$button-primary-option-border-color: $primary;
+$button-secondary-option-background-color: $accent;
+$button-secondary-option-background-hover: $accent-hover;
+$button-secondary-option-border-color: $accent;
+$button-cancel-option-background-color: $neutral-gray;
+$button-cancel-option-background-hover: $neutral-gray-hover;
+$button-cancel-option-border-color: $neutral-gray;
+$button-caution-option-background-color: $caution;
+$button-caution-option-background-hover: $caution-hover;
+$button-caution-option-border-color: $caution;
+
+// Forms related vars
+$input-border: 1px solid $disabled-option;
+
+// layout
+$sidebar-width: 16em;
+$sidebar-width-collapsed: 5em;
+$header-height: 60px;
+
+//colors
+$app-color: #1a2543;

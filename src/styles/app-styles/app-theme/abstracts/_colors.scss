@@ -1,0 +1,23 @@
+/*
+ * Accepted colors palette
+ */
+$primary: #1a2543;
+$primary-hover: #507ee1;
+
+$accent: #6ebeed;
+$accent-hover: saturate(lighten($accent, 10%), 20%);
+
+$neutral-gray: #99a0aa;
+$neutral-gray-hover: darken($neutral-gray, 10%);
+
+$caution: #d84951;
+$caution-hover: saturate(lighten($caution, 10%), 20%);
+
+$success: #8fe9b4;
+$success-hover: saturate(lighten($success, 10%), 20%);
+
+$link-color: #71a6ff;
+$background-color: #f9fafb;
+$disabled-option: #dddfe2;
+$typography-color: #1a2543;
+$header-grey: #a9b5bd;

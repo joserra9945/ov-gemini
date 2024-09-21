@@ -1,0 +1,29 @@
+.dialog_background-container {
+  &.verificar-empresa-dialog {
+    .dialog_content {
+      height: auto;
+      width: fit-content;
+      &.dialog_openned {
+        animation: none;
+      }
+    }
+    .verificar-empresa-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+    }
+    .verificar-empresa-content {
+      margin-top: 20px;
+    }
+  }
+}
+
+.perfil-usuario-table {
+  .turbo-table__header {
+    .turbo-table__header-left-section {
+      .title-h2 {
+        color: #1a2543;
+      }
+    }
+  }
+}

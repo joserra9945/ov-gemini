@@ -1,0 +1,6 @@
+@import "../../../styles/component-styles.scss";
+.general-form {
+    @include for-phone {
+        width: 95%;
+    }
+}

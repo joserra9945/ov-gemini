@@ -1,0 +1,146 @@
+@import './bootstrap_variables.scss';
+@import './app-theme/main.scss';
+@import './variables';
+@import './common';
+@import './states';
+@import './globalResponsive';
+@import './typography';
+@import './animations';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+}
+
+#app-root {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+  .header {
+    display: none;
+  }
+  .sidenav {
+    display: none;
+  }
+  .App {
+    min-height: unset !important;
+  }
+  .card {
+    box-shadow: none;
+    border-radius: unset;
+  }
+}
+
+.main-container {
+  height: calc(100% - 40px);
+  @include for-phone {
+    margin: 0;
+    height: 100%;
+  }
+}
+
+.g-button {
+  &.g-button-primary-contained {
+    background-color: #1a2543;
+    border-color: #1a2543;
+  }
+  &.g-button-disabled {
+    background-color: #dddfe2;
+    border-color: #dddfe2;
+  }
+}
+.label-select-button {
+  color: #1a2543;
+  font-size: 14px;
+}
+
+.g-button {
+  &.g-button-primary-contained {
+    &:hover {
+      background-color: #1a2543 !important;
+      border-color: #1a2543 !important;
+    }
+    &.g-button-disabled:hover {
+      background-color: #dddfe2 !important;
+      border-color: #dddfe2 !important;
+    }
+    &.button-nueva-forma-contacto {
+      color: #1a2543;
+    }
+  }
+}
+
+.g-button {
+  &.g-button-light-contained {
+    &:not(.g-button-disabled) {
+      color: #1a2543;
+    }
+  }
+}
+
+.turbo-table__header {
+  .turbo-table__header-left-section {
+    .turbo-table__header-title {
+      color: #1a2543;
+    }
+  }
+}
+
+.select-buttton-efectos-wrapper {
+  .p-selectbutton {
+    .p-button.p-component.p-highlight {
+      .button-select {
+        svg {
+          color: #1a2543;
+        }
+      }
+    }
+  }
+}
+
+.ant-steps-item {
+  &.ant-steps-item-process {
+    &.ant-steps-item-active {
+      > .ant-steps-item-container
+        > .ant-steps-item-content
+        > .ant-steps-item-title {
+        color: #1a2543;
+      }
+    }
+  }
+}
+
+.filepond__container {
+  .filepond--drop-label {
+    .fp-label {
+      .fp-label--right {
+        .filepond--label-action {
+          color: #1a2543;
+        }
+      }
+    }
+  }
+}
+
+.estado-contacto-1 {
+  background-color: rgba(0, 105, 170, 0.15);
+  color: #0069aa;
+}
+
+h1,
+h2 {
+  color: #1a2543;
+}
+h4,
+h5,
+h6 {
+  color: #00d8ac !important;
+  font-family: inherit;
+  font-style: normal;
+}

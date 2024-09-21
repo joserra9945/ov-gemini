@@ -1,0 +1,43 @@
+.g-input-number {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  margin: 0;
+  font-size: 1rem;
+  color: #495057;
+  background: #ffffff;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    box-shadow 0.2s;
+  flex: 1 1 auto;
+  border-radius: 3px;
+  &:focus,
+  &:focus-visible {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem #a6d5fa;
+    border-color: #2196f3;
+  }
+  &:hover {
+    border-color: #2196f3;
+  }
+  &:disabled {
+    color: #b6b6b6;
+    &:hover,
+    &:focus {
+      border-color: #e2e5e9;
+    }
+  }
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

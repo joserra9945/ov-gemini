@@ -1,0 +1,104 @@
+@import '../../styles/component-styles.scss';
+
+.efectos-container.card {
+  padding: 0;
+  width: 70%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  @include for-laptops {
+    min-width: 688px;
+    padding: 20px;
+  }
+
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  .efectos-subheader {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #00000036;
+    h2 {
+      margin: 0;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      color: #1a2543;
+    }
+    .button-bar {
+      margin-left: auto;
+      display: flex;
+      @include for-phone {
+        gap: 0.5rem;
+      }
+      button {
+        margin-right: 10px;
+        height: 40px;
+        width: 40px;
+        @include for-phone {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .efectos-body {
+    padding: 20px;
+  }
+  .efectos-numero {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1a2543;
+    margin-bottom: 10px;
+  }
+  .efectos-rs {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    /* identical to box height */
+    margin-bottom: 20px;
+    color: #1a2543;
+    @include for-phone {
+      font-size: 16px;
+    }
+  }
+  .efectos-table {
+    width: 100%;
+    &--header {
+      th {
+        padding-bottom: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(34, 34, 34, 0.6);
+      }
+    }
+    &--body {
+      td {
+        &:first-child {
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+        }
+        &:last-child {
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+        background: #f8f8f8;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #1a2543;
+        padding: 20px;
+        text-align: center;
+      }
+    }
+  }
+  @include for-tablet {
+    margin: 0 20px;
+    width: calc(100% - 40px);
+    // padding: 20px 10px 10px 10px;
+    .efectos-table__container {
+      width: 100%;
+      overflow-x: auto;
+    }
+  }
+}

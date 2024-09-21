@@ -1,0 +1,30 @@
+@import '../../styles/component-styles.scss';
+
+.data-info {
+  label {
+    display: block;
+    font-weight: bolder;
+  }
+}
+.p-dropdown {
+  width: auto !important;
+}
+
+.perfil-page {
+  .header-title {
+    h2 {
+      color: #0069aa;
+      font-size: 21px;
+      font-weight: 500;
+    }
+  }
+}
+
+.libradoresTable
+  > .datatable-responsive
+  .p-datatable.p-datatable-responsive
+  table {
+  @include for-laptops-and-rest {
+    width: 100% !important;
+  }
+}

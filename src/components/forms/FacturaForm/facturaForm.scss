@@ -1,0 +1,18 @@
+.p-dialog {
+  &.dialog-modal-tooltip {
+    .p-dialog-header {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      .p-dialog-title {
+        color: #0069aa;
+      }
+    }
+    .p-dialog-content {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+}

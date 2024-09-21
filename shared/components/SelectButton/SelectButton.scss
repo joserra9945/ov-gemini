@@ -1,0 +1,24 @@
+.button-primary {
+  background-color: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  padding: 4px;
+
+  .p-button {
+    background-color: transparent;
+    border-radius: 7px !important;
+    border: none;
+  }
+
+  .p-highlight {
+    background-color: #ffffff !important;
+    color: #495057 !important;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+  .p-button:not(.p-highlight) {
+    box-shadow: none !important;
+  }
+}

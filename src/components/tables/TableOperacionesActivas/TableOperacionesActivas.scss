@@ -1,0 +1,287 @@
+@import '../../../styles/component-styles.scss';
+
+.datatable--operaciones {
+  .datatable-component {
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .datatable-component .p-datatable-thead tr th {
+    background-color: white !important;
+    color: #303030 !important;
+    font-size: 18px !important;
+    border: none !important;
+  }
+
+  .datatable-component .p-datatable-tbody tr td {
+    border: none !important;
+    color: #1a2543 !important;
+    font-size: 16px !important;
+  }
+
+  .datatable-component .p-datatable-thead tr th:last-child {
+    border: none !important;
+  }
+
+  .datatable-component .p-datatable-tbody tr td:last-child {
+    // padding: 10px !important;
+    border: none !important;
+  }
+
+  .datatable-component
+    .p-datatable-tbody
+    tr
+    td:last-child
+    .p-button.p-button-outlined {
+    color: white;
+  }
+
+  .datatable-component
+    .p-datatable-tbody
+    tr
+    td:last-child
+    .p-button.p-button-outlined
+    .pi {
+    font-weight: 800;
+  }
+
+  .datatable-component .p-column-title {
+    color: #222222;
+    font-weight: 500;
+  }
+
+  .datatable-component .p-datatable-tbody .p-datatable-emptymessage {
+    line-height: 85px;
+
+    > td {
+      text-align: center;
+    }
+  }
+
+  .datatable-component .p-selectable-row {
+    @include for-laptops {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .main-container,
+  .resumen-operacion-flow {
+    .p-datatable table {
+      // border-collapse: separate;
+      // border-spacing: 0 0.5em;
+      .p-datatable-thead {
+        .p-checkbox-box {
+          display: none;
+          cursor: default;
+        }
+        .p-checkbox {
+          display: none;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  .p-datatable table {
+    // border-collapse: separate;
+    // border-spacing: 0 0.5em;
+    tr {
+      td:first-of-type {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      td:last-of-type {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      td {
+        span {
+          display: block;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+
+    .subtable table {
+      tr:hover {
+        background: none !important;
+      }
+    }
+
+    tr.p-selectable-row + tr:not(.p-selectable-row):hover {
+      background: none !important;
+    }
+
+    tr.p-selectable-row + tr:not(.p-selectable-row) {
+      > td:first-child {
+        padding-bottom: 10px;
+        // background-color: red !important;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+
+  .operaciones-activas-table {
+    height: 100%;
+  }
+
+  .table-efectos-sin-asignar {
+    height: 100%;
+    .p-datatable-thead {
+      .p-checkbox-box {
+        // display: flex !important;
+        cursor: default;
+      }
+      .p-checkbox {
+        // display: flex !important;
+        cursor: default;
+      }
+    }
+  }
+
+  //Tenemos que ver porque le pone un left irreal
+  .contenido-overlay .panel-overlay {
+    left: 0% !important;
+    border-radius: 5px;
+  }
+
+  .contenido-overlay-email .panel-overlay-email {
+    left: 0% !important;
+    width: 17em !important;
+    border-radius: 5px;
+  }
+
+  .contenido-overlay {
+    text-align: center;
+  }
+
+  .contenido-overlay .p-overlaypanel-close {
+    background-color: transparent;
+    height: 16px;
+    width: 16px;
+    color: #0f2143;
+    top: 5px;
+    right: 5px;
+  }
+
+  .p-button-contrato.p-button.p-component {
+    background-color: #54dfa7;
+    margin-top: 10px;
+  }
+
+  .contenido-overlay-email {
+    text-align: center;
+  }
+
+  .p-button-contrato-email {
+    margin-top: 10px;
+  }
+
+  .p-input-contrato-email {
+    margin-top: 10px;
+  }
+
+  .text-warning {
+    color: #ff961c;
+  }
+
+  .text-danger {
+    color: darkred;
+  }
+
+  .icono-phone-envio-email {
+    float: right;
+  }
+  .overlay-header {
+    display: flex;
+    align-items: center;
+    .overlay-header-title {
+      margin: auto;
+      padding-right: 22px;
+    }
+  }
+
+  .number-circle {
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    border: 1px solid white;
+    background-color: inherit;
+    color: white;
+    text-align: center;
+    margin-right: 8px;
+  }
+
+  .p-datatable-tbody {
+    .p-selectable-row {
+      .column-center {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    }
+  }
+
+  .datatable--operaciones {
+    .subtabla {
+      .p-datatable-thead > tr > th .p-column-title {
+        display: block !important;
+      }
+    }
+    @include for-tablet {
+      tr {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .red-text {
+    color: red;
+  }
+
+  .green-text {
+    color: #3ee863;
+  }
+
+  .actions-box {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1rem;
+  }
+
+  .doc-requerida-button-operaciones {
+    position: relative;
+    button.g-button {
+      height: 40px;
+      width: 40px;
+      @include for-phone {
+        color: transparent;
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
+    span {
+      background-color: white;
+      min-width: 0.75rem;
+      height: 0.75rem;
+      line-height: 0.75rem;
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .p-datatable.p-datatable-responsive .p-datatable-thead > tr > th {
+      display: none;
+    }
+  }
+}

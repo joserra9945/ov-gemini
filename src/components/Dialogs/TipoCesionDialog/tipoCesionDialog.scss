@@ -1,0 +1,33 @@
+@import '../../../styles/component-styles.scss';
+
+.dialog_background-container.tipo-cesion__dialog {
+  @include for-desktop {
+    .dialog_openned.no-animation {
+      animation-name: topToCenter;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+  }
+  .dialog_content.dialog_openned {
+    width: 625px;
+    height: 318px;
+    .dialog_header {
+      margin-bottom: 32px;
+      .header_right {
+        display: none;
+      }
+    }
+    .tipo-cesion__container {
+      .tipo-cesion__radio {
+        margin-top: 28px;
+        .radiobutton-component {
+          .p-radiobutton-checked {
+            & + label {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}

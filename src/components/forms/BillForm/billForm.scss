@@ -1,0 +1,26 @@
+@import '../../../styles/component-styles.scss';
+
+.factura-form__container {
+  .factura-form__upload {
+    flex: 0.5;
+    .uploader {
+      height: 15rem;
+      @include for-phone {
+        height: auto;
+      }
+    }
+  }
+  .factura__fields {
+    flex: 1;
+    p {
+      margin-top: 1rem;
+    }
+    .factura-form__content {
+      margin-top: -0.5rem;
+    }
+  }
+  .disabled {
+    pointer-events: none;
+    background: #c3b2b278;
+  }
+}

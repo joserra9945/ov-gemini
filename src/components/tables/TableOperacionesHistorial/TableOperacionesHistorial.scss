@@ -1,0 +1,89 @@
+@import '../../../styles/component-styles.scss';
+.datatable--operaciones-historial {
+  .datatable-component {
+    padding: 20px;
+    padding-left: 45px;
+    padding-right: 45px;
+    box-shadow: 6px 0px 24px -8px rgba(0, 0, 0, 0.17);
+  }
+
+  .datatable-component .p-datatable-thead tr th {
+    background-color: white !important;
+    color: #303030 !important;
+    font-size: 18px !important;
+    border: none !important;
+    border-bottom: 1px solid #f3f3f3 !important;
+    border-right: 1px solid #f3f3f3 !important;
+  }
+
+  .datatable-component .p-paginator {
+    border: none !important;
+  }
+
+  .datatable-component .p-datatable-tbody tr td {
+    border: none !important;
+    border-right: 1px solid #f3f3f3 !important;
+    color: $td-color !important;
+    font-size: 16px !important;
+  }
+
+  .datatable-component .p-datatable-thead tr th:last-child {
+    border: none !important;
+    border-bottom: 1px solid #f3f3f3 !important;
+  }
+
+  .datatable-component .p-datatable-tbody tr td:last-child {
+    // padding: 10px !important;
+    border: none !important;
+  }
+
+  .datatable-component .p-column-title {
+    color: #333333;
+  }
+
+  .datatable-component .p-datatable-tbody .p-datatable-emptymessage {
+    line-height: 85px;
+
+    // > td {
+    //   text-align: center;
+    // }
+  }
+
+  .p-datatable table {
+    // border-collapse: separate;
+    border-spacing: 0 0.5em;
+
+    tr td:first-of-type {
+      border-top-left-radius: $row-border-radius;
+      border-bottom-left-radius: $row-border-radius;
+    }
+
+    tr td:last-of-type {
+      border-top-right-radius: $row-border-radius;
+      border-bottom-right-radius: $row-border-radius;
+    }
+  }
+
+  .doc-requerida-button-operaciones {
+    position: relative;
+    button.g-button {
+      height: 40px;
+      width: 40px;
+      @include for-phone {
+        color: transparent;
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
+    span {
+      background-color: white;
+      min-width: 0.75rem;
+      height: 0.75rem;
+      line-height: 0.75rem;
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+    }
+  }
+}

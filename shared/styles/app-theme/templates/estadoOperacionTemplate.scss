@@ -1,0 +1,34 @@
+// 0 = Generando contrato, 1 = Enviando contrato, 2 = Contrato no enviado, 3 = Pte. de firma, 4 = Firmada,  5 = Pte. de pago, 6 = Cerrada, 7 = Parcialmente pagada, 8 = Pagada, , 9 = Invalidada, 10 = Perdida
+
+@import '../../mixins';
+@import '../../variables';
+
+.estado-operacion-3,
+.estado-operacion-4,
+.estado-operacion-5 {
+  @include estado-box-format($pendiente-font-color);
+}
+
+.estado-operacion-6,
+.estado-operacion-0 {
+  @include estado-box-format($cerrado-font-color);
+}
+
+.estado-operacion-9,
+.estado-operacion-10,
+.estado-operacion-11 {
+  @include estado-box-format($rechazado-font-color);
+}
+
+.estado-operacion-7,
+.estado-operacion-8 {
+  @include estado-box-format($estado-fondo-finalizado);
+}
+
+.estado-operacion-1 {
+  @include estado-box-format($enviando-contrato);
+}
+
+.estado-operacion-2 {
+  @include estado-box-format($contrato-no-enviado);
+}

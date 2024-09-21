@@ -1,0 +1,107 @@
+@import '../../styles/component-styles.scss';
+.nueva-operacion {
+  @include for-phone {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  .resumen-operacion-flow {
+    .table-card {
+      @include for-phone {
+        display: block;
+        height: 100vh;
+      }
+      .header-table {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+        align-items: center;
+        @include for-phone {
+          padding: 15px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          justify-items: center;
+          height: 62px;
+          position: fixed;
+          top: 64px;
+          z-index: 10;
+          width: 100%;
+          background-color: white;
+        }
+        h2 {
+          margin: 0;
+          @include for-phone {
+            //todo - Lo sé, el important es una mierda, pero voy a poner los estilos primero y después limpio todo para no tener importants en el proyecto. @afaura
+            display: block;
+            font-size: 16px !important;
+            color: black;
+            font-weight: 500 !important;
+          }
+        }
+        .subheader-resumen-operacion {
+          display: flex;
+          align-items: center;
+          width: 50%;
+          margin-left: auto;
+          justify-content: flex-end;
+          font-size: 16px;
+          strong {
+            margin-right: 20%;
+            @include for-phone {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      .p-datatable {
+        @include for-phone {
+          margin-top: 62px;
+        }
+        .p-datatable-wrapper {
+          @include for-phone {
+            padding-bottom: 128px;
+          }
+        }
+        &.p-datatable-responsive {
+          .p-datatable-tbody {
+            > tr > td.description-mobile-container {
+              width: 16em;
+              @media (max-width: 385px) {
+                width: 14em;
+              }
+              @media (max-width: 350px) {
+                width: 12em;
+              }
+            }
+          }
+        }
+        .p-datatable-footer {
+          .responsive-footer {
+            .resumen-footer-left {
+              @include for-phone {
+                width: 49%;
+              }
+            }
+            .resumen-footer-right {
+              @include for-phone {
+                width: 49%;
+              }
+            }
+            .g-button {
+              width: 100%;
+              padding: 15px;
+            }
+          }
+        }
+      }
+      .p-row-expanded {
+        .p-datatable {
+          @include for-phone {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

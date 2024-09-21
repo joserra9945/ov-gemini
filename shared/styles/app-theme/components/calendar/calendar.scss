@@ -1,0 +1,64 @@
+
+.p-datepicker-title {
+    display: flex;
+  }
+  
+  .p-custom-dropdown {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid #f8f8f8;
+    border-radius: 3px;
+  }
+  
+  .p-custom-dropdown--label {
+    position: relative;
+    padding: 0.75rem 0;
+    width: 120px;
+    overflow: hidden;
+    z-index: 2;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .p-custom-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    border: none;
+    select {
+      -webkit-appearance: none;
+      height: 40px;
+      padding: 0px 70px 1px 10px;
+      font-size: 14px;
+      background: transparent;
+      background-color: #ffffff;
+      background-image: none;
+      -ms-word-break: normal;
+      word-break: normal;
+      z-index: 2;
+      border-radius: 3px;
+      border: 1px solid #ced4da;
+      width: 100%;
+      &:hover {
+        border-color: #6366f1;
+      }
+    }
+    &::after {
+      font-family: 'primeicons';
+      speak-as: none;
+      font-style: normal;
+      font-weight: normal;
+      font-feature-settings: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      display: inline-block;
+      -webkit-font-smoothing: antialiased;
+      content: '\e902';
+      position: relative;
+      right: 24px;
+    }
+  }
+  

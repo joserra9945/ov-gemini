@@ -1,0 +1,62 @@
+# build of Gefintech Gestion Front for staging environment. This build runs as a change in the branch release.
+
+name: "$(date:yy.MM.dd)$(rev:.r)"
+
+# Disable the CI trigger.
+trigger:
+  batch: true
+  branches:
+    include:
+    - release/*
+
+pool:
+  name: Default
+  # TODO - temporary agent while setting authentication on backup.
+  demands:
+    - Agent.ComputerName -equals DEVOPS01
+
+resources:
+  repositories:
+    - repository: DevOpsCommon
+      type: git
+      name: "Gefintech/DevOpsCommon"
+
+variables:
+  - group: Finanway_Cliente_Frontend_Release_STG
+
+  - name: 'system_accesstoken'
+    value: '$(System.AccessToken)'
+
+stages:
+  - template: Templates/node/Builds/NodeCoreReleaseBuild.yml@DevOpsCommon
+    parameters:
+      # Development Environment Parameters
+      EnvironmentName: 'staging'
+      NodeVersions: $(NodeVersions)
+      SubmoduleAccess: true
+      InstallLegacy: false
+      Token: $(Token)
+      UrlSubmodule: $(UrlSubmodule)
+      InstallStandard: true
+      ContentsToDeleteWhenDeploying: |
+        **
+        !gestion/**
+        !tarificador/**
+        !tarificador3/**
+        !mantenimiento.html
+        !web.config
+      ContentsForBackup: |
+        **
+        !gestion/**
+        !tarificador/**
+        !tarificador3/**
+        
+      DeploymentEnvironments:
+        -
+          WebsiteServerPath: $(WebsiteServerPath_STG)
+          MaintenancePageFile: $(MaintenancePageFile)
+          AdminUserDev: $(AdminUser_STG)
+          AdminPasswdDev: $(AdminPasswd_STG)
+          ServerIpDev: $(ServerIP_STG)
+          EnvironmentName: 'staging'
+          backupPath: $(backupPath_STG)

@@ -1,0 +1,19 @@
+@use "sass:map";
+@function addColorSet($colorName, $colorValue, $colorHoverValue: null) {
+  $colorHoverValue: if(
+    $colorHoverValue == null,
+    darken($colorValue, 10%),
+    $colorHoverValue
+  );
+
+  $colors: map.merge(
+    $colors,
+    (
+      #{$colorName}-background: $colorValue,
+      #{$colorName}-background-hover: $colorHoverValue,
+      #{$colorName}-border-color: $colorValue
+    )
+  );
+
+  @return $colors;
+}

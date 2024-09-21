@@ -1,0 +1,30 @@
+.g-overlay-wrapper {
+  z-index: 999;
+  min-width: 300px;
+  position: absolute;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  .g-overlay {
+    background-color: white;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25),
+      inset 0px 1px 1px rgba(0, 0, 0, 0.03),
+      inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  }
+  .g-overlay-header {
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+  }
+  .g-overlay-pointer {
+    background-color: white;
+    box-shadow: inherit;
+    height: 10px;
+    width: 10px;
+    display: block;
+    position: revert;
+    float: right;
+    margin-top: -5px;
+    margin-right: 14px;
+    transform: rotate(45deg);
+    z-index: 998;
+  }
+}

@@ -1,0 +1,16 @@
+enum firmaNotarialEnum {
+  SOLICITADA,
+  CONFIRMADA,
+  DOCUMENTACIO_GENERADA,
+  ENVIANDO_DOCUMENTACION,
+  ERROR_ENVIANDO_DOCUMENTACION,
+  DOCUMENTACION_ENVIADA,
+  FINALIZADA,
+}
+
+enum tipoFirmaEnum {
+  CESIONES,
+  PRESTAMOS,
+}
+
+export { firmaNotarialEnum, tipoFirmaEnum };

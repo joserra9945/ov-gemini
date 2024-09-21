@@ -1,0 +1,37 @@
+@import '../../../../styles/component-styles.scss';
+
+.pagare-detail__container {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+  }
+  .header {
+    font-weight: 500;
+    color: #222222;
+    @include for-phone {
+      font-size: 10px;
+    }
+  }
+  .detail {
+    background: #f8f8f8;
+    color: #1a2543;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 1rem;
+    @include for-phone {
+      font-size: 12px;
+    }
+    span {
+      background: #34b53a59;
+      color: #6ea371;
+      padding: 0.3rem 2rem;
+      border-radius: 6px;
+    }
+  }
+}

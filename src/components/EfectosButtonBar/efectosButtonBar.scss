@@ -1,0 +1,11 @@
+@import '../../styles/component-styles.scss';
+
+.action-buttons--factura {
+  .g-button.form__loader-button {
+    @include for-phone {
+      padding: 15px 10px;
+      width: 50%;
+      height: 45px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import '../../../styles/component-styles.scss';
+
+.otros-documentos__container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  .otros-documentos-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .otros-documentos__acordeon-tab {
+    box-shadow: 0px 1px 4px rgba(33, 33, 52, 0.1);
+    border-bottom: 0px;
+    border-radius: 0px 0px 0px 0px !important;
+    margin-bottom: 1px;
+  }
+}
+
+.footer-buttons .cancelar__button {
+  box-shadow: 0px 0px 0px !important;
+}
+
+.subir-doc__dialog {
+  .dialog_content {
+    width: 35% !important;
+    height: auto !important;
+    overflow-x: hidden;
+    @include for-phone {
+      height: auto !important;
+      width: 100% !important;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.multi-container {
+  .p-multiselect-items-label {
+    display: flex !important;
+    column-gap: 0.5rem;
+  }
+
+  .p-multiselect-label-container {
+    display: flex;
+    flex-grow: 1;
+    .p-multiselect-label {
+      display: flex;
+      column-gap: 0.5rem;
+    }
+  }
+}

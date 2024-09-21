@@ -1,0 +1,40 @@
+.gestion-contactos__page {
+  .g-tooltip_trigger {
+    margin-right: 2%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .telefono__column,
+  .estado-cargo__column {
+    text-align: center !important;
+    .ellipsis {
+      text-align: center !important;
+      .g-tooltip_trigger {
+        width: 100%;
+      }
+    }
+  }
+  .estado--wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .add-representante {
+    width: 100%;
+    padding: 12px 16px 12px 16px !important;
+    background-color: #fff !important;
+    color: #0069aa;
+    border: #0069aa 2px solid !important;
+  }
+  .edit-representante {
+    justify-content: flex-end;
+  }
+}
+
+.is-agent {
+  color: #34b53a;
+}
+
+.non-agent {
+  color: #e40139;
+}

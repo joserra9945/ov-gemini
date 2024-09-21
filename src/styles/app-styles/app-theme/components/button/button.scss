@@ -1,0 +1,97 @@
+button:focus {
+  outline: none !important;
+}
+.p-button {
+  border-radius: 3px;
+  text-align: center;
+  border: none;
+  font-size: $button-font-size;
+  font-family: inherit;
+  background-color: $button-primary-option-background;
+  padding: 1rem;
+
+  &.react-button-loaders__loading {
+    border-radius: inherit !important;
+    transform: unset !important;
+  }
+
+  &:not(.p-disabled):hover {
+    background-color: $button-primary-option-background-hover;
+    cursor: pointer;
+  }
+
+  &.p-button-secondary {
+    background-color: $button-secondary-option-background-color;
+    border-color: $button-secondary-option-border-color;
+    border: none;
+
+    &:not(.p-disabled):hover {
+      background-color: $button-secondary-option-background-hover;
+      box-shadow: 0px 4px 20px #00000033;
+      cursor: pointer;
+    }
+  }
+
+  &.p-disabled {
+    background-color: $button-disabled;
+    border-color: $button-disabled;
+
+    &:hover {
+      border-color: $button-disabled !important;
+      box-shadow: none;
+      cursor: pointer;
+    }
+  }
+
+  &.p-button-link {
+    background-color: transparent;
+  }
+
+  &.p-danger {
+    background-color: $caution;
+    border-color: $caution;
+
+    &:hover {
+      background-color: $caution-hover !important;
+      border-color: $caution !important;
+    }
+  }
+  &.p-success {
+    background-color: $success;
+    border-color: $success;
+
+    &:hover {
+      background-color: $success-hover !important;
+      border-color: $success !important;
+    }
+  }
+  @include for-phone {
+    &.p-button-lg {
+      font-size: 1rem;
+    }
+  }
+}
+
+a.p-button:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+button.g-button.help-button {
+  color: $primary;
+  background-color: white;
+  height: 48px;
+  width: 48px !important;
+  border-radius: 4px;
+  > svg {
+    width: 20px;
+    height: 20px;
+  }
+  &:not(.g-button-disabled).icon-only-button:hover {
+    background-color: white;
+  }
+}
+
+button.g-button.button-icon-black svg {
+  color: black;
+}

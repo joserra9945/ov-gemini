@@ -1,0 +1,64 @@
+@import '../../styles.scss';
+@import '../styles.scss';
+
+.retir-sociedades__modal {
+    @include retir-modal();
+
+    .modal__content {
+        @include retir-modal-content();
+        max-height: 100%;
+        max-width: 100%;
+        overflow: auto;
+
+        .retir-sociedades__container {
+            max-width: 1400px;
+            min-height: 720px;
+
+            .p-datatable-scrollable-header-box {
+                @media (min-width: 1024px) {
+                    box-shadow: 0px 1px 4px rgba(33, 33, 52, 0.1);
+                    margin-bottom: 3px;
+                }
+            } 
+
+            .nivel__column {
+                width: 100px;
+            }
+
+            .nif__column {
+                width: 200px;
+            }
+
+            .denominacion__column {
+                width: 400px;
+                white-space: inherit;
+            }
+
+            .domicilio__column {
+                width: 500px;
+                white-space: inherit;
+            }
+
+            .codigo-pais__column {
+                text-align: center; 
+                @media (max-width: 1024px) {
+                    text-align: left;
+                }
+            }
+
+            &__header {
+                box-shadow: 0px 1px 4px rgba(33, 33, 52, 0.1);  
+                > div:first-child {
+                    @include retir-font(#0069AA, 21px, 25px, 500);
+                }
+            }
+
+            &__titular {
+                box-shadow: 0px 1px 4px rgba(33, 33, 52, 0.1);  
+                span {
+                    @include retir-font(#212121, 22px, 16px, 500);  
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,293 @@
+@keyframes openMin {
+  0% {
+    width: 1%;
+    height: 1%;
+  }
+  100% {
+    width: 712px;
+  }
+}
+
+.dialog_background-container {
+  z-index: 1000;
+}
+
+.dialog_background-container .dialog_content {
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  @include for-phone {
+    border-radius: 0;
+  }
+  .footer-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    button {
+      margin-left: 10px;
+    }
+  }
+}
+
+.afterbanks-dialog {
+  .dialog_content {
+    width: 50%;
+    height: 75%;
+    @include for-laptops-and-rest {
+      width: auto;
+    }
+  }
+  @include for-phone {
+    width: 100%;
+    height: 100%;
+  }
+  @keyframes openMin {
+    0% {
+      width: 1%;
+      height: 1%;
+    }
+    100% {
+      width: 50%;
+      height: 75%;
+    }
+  }
+}
+
+.afterbanks {
+  .footer-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    button {
+      margin-left: 10px;
+      @include for-phone {
+        margin: 0;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+    @include for-phone {
+      display: block;
+    }
+  }
+}
+
+.afterbanks-dialog,
+.representante-dialog,
+.direcciones-dialog {
+  @include for-phone {
+    z-index: 1001;
+  }
+}
+
+.dialog_background-container {
+  &.contacto-form__dialog {
+    .dialog_content {
+      width: 40%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding-right: 16px;
+
+      @include for-laptops {
+        height: 100% !important;
+        width: 100%;
+      }
+      @include for-tablet {
+        height: 100%;
+        width: 100%;
+      }
+      @include for-phone {
+        height: 100% !important;
+        width: 100%;
+      }
+      .dialog_header {
+        .header_right {
+          .icon-only-button {
+            right: -10px;
+          }
+        }
+      }
+      .contacto__fields {
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-right: 20px;
+        height: 100%;
+        padding-bottom: 10px;
+        @include for-tablet {
+          padding-right: 12px;
+        }
+        @include for-phone {
+          padding-right: 0;
+        }
+        .contacto-form__content {
+          padding: 3px;
+        }
+      }
+    }
+  }
+}
+
+.representante-dialog {
+  .dialog_content {
+    max-width: 650px;
+    height: unset;
+    max-height: 80vh;
+    .uploader {
+      height: 30vh;
+    }
+    @include for-phone {
+      max-height: unset;
+    }
+  }
+}
+
+.subir-doc-dialog {
+  .dialog_content {
+    height: auto;
+    .uploader {
+      height: auto;
+    }
+    .uploader .uploader__filepond_container {
+      height: 250px;
+    }
+  }
+}
+
+.factura-dialog,
+.pagare-dialog {
+  .dialog_content {
+    width: 1080px;
+    height: auto;
+    .uploader {
+      height: auto;
+    }
+    .factura-dialog-form,
+    .pagare-dialog-form {
+      display: flex;
+      align-items: center;
+      .uploader .uploader__filepond_container {
+        height: 250px;
+        width: 300px;
+      }
+      .factura-fields,
+      .pagare-fields {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+.direcciones-dialog {
+  .dialog_content {
+    width: 1080px;
+    height: auto;
+  }
+  @keyframes openMin {
+    0% {
+      width: 1%;
+      height: 1%;
+    }
+    100% {
+      width: 1080px;
+      height: auto;
+    }
+  }
+  .g-messages {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.crear-estudio-dialog {
+  .dialog_content {
+    height: auto;
+    justify-content: space-between;
+  }
+}
+
+.firma-toma-razon-dialog {
+  .dialog_content {
+    padding: 0;
+    width: 40em;
+    height: 450px;
+    max-height: 55%;
+    display: inline-table;
+    .dialog_header {
+      color: $app-color;
+      margin: 20px;
+    }
+
+    .container {
+      height: 100%;
+    }
+  }
+  @keyframes openMin {
+    0% {
+      width: 1%;
+      height: 1%;
+    }
+    100% {
+      // width: 50%;
+      width: 25%;
+      height: 55%;
+      max-height: 55%;
+    }
+  }
+}
+
+.update-scoring {
+  .dialog_content.dialog_openned {
+    height: auto;
+    width: 45%;
+  }
+}
+
+@include for-phone {
+  .afterbanks-dialog,
+  .representante-dialog,
+  .direcciones-dialog {
+    width: 100%;
+    height: 100%;
+    .dialog_content {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      overflow-y: auto;
+      border-radius: unset;
+      .dialog_header {
+        .header_left {
+          font-size: 21px;
+        }
+      }
+      .footer-buttons {
+        .g-button {
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
+
+.dialog_background-container.direccion-form__dialog {
+  @include for-desktop {
+    .dialog_openned.no-animation {
+      // animation-name: topToCenter;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+    .dialog_content {
+      width: 950px;
+      height: auto;
+    }
+  }
+  .direccion-form__container {
+    .direccion-form-footer-buttons {
+      display: flex;
+      justify-content: flex-end;
+      .direccion-form__button-cancelar {
+        margin-right: 50px;
+      }
+    }
+  }
+}

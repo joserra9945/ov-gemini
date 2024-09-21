@@ -1,0 +1,106 @@
+@include for-desktop {
+  .uploader {
+    flex-grow: 1;
+    max-height: 100%;
+    background: #f9fafb;
+    border: 2px dashed #dddfe2;
+    .filepond--wrapper {
+      background: inherit;
+      .filepond--file {
+        .filepond--file-info {
+          display: none;
+        }
+        .filepond--media-preview {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .filepond--root {
+        background: inherit;
+        margin: 0;
+        max-height: 500px;
+        .filepond--list-scroller {
+          margin-top: 3em;
+        }
+
+        i.pi.pi-cloud-upload::before {
+          font-size: 7em;
+          color: $primary;
+        }
+        .filepond--panel-root {
+          background-color: inherit;
+        }
+
+        .filepond--item[data-filepond-item-state='busy'] {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.filepond--drop-label {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 8px;
+}
+
+.effect-filepond__container {
+  position: relative;
+  .nanonets__button {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+  }
+}
+
+@include for-phone {
+  .uploader {
+    .filepond--wrapper {
+      background-color: #f9fafb;
+      border: 1px solid #e2e2e2;
+      border-radius: 4px;
+      .filepond--root {
+        background-color: inherit;
+
+        .filepond--panel-root {
+          background-color: inherit;
+        }
+
+        .filepond--drop-label {
+          background: inherit;
+          .filepond--label-action {
+            color: $link-color;
+          }
+          // height: inherit !important;
+          .filepond--label-action {
+            text-decoration: none;
+          }
+          .fileupload-mobile-icon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include for-phone {
+              justify-content: center;
+            }
+          }
+          i.pi.pi-cloud-upload::before {
+            font-size: 100px;
+            @include for-phone {
+              font-size: 1.5em;
+              text-align: right;
+              color: $primary;
+            }
+          }
+        }
+        .filepond--drop-label.filepond--drop-label label {
+          padding: 0 15px 0 15px;
+          @include for-phone {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}

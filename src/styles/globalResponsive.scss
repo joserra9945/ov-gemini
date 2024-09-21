@@ -1,0 +1,25 @@
+@include for-phone {
+  body {
+    font-size: 14px !important;
+  }
+  h2 {
+    font-size: 21px;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
+  .cesion__form,
+  .firmar-cesion__form {
+    margin: 0px !important;
+    width: 100%;
+  }
+  .firmar-cesion__form {
+    margin-top: 10px !important;
+  }
+  .subir-cesion__form-container {
+    margin-top: 0px !important;
+  }
+  .p-dialog {
+    width: 90% !important;
+  }
+}

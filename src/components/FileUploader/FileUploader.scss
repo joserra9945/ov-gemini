@@ -1,0 +1,71 @@
+@import '../../styles/component-styles.scss';
+
+.disableDelete {
+  .filepond--action-remove-item {
+    display: none !important;
+  }
+}
+.filepond--file-status {
+  transform: none !important;
+}
+.uploader {
+  .uploader__filepond_container {
+    overflow: auto;
+    height: 100%;
+    &.--max-height {
+      .filepond--root {
+        max-height: 680px;
+      }
+    }
+    .filepond--wrapper {
+      @include for-phone {
+        height: 100%;
+        #filePond {
+          height: 100% !important;
+        }
+      }
+    }
+  }
+  .uploader__create-invoice {
+    > span {
+      font-size: 18px;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 1em;
+    background-color: #fff;
+    border-bottom: 2px dashed #dddfe2;
+  }
+}
+.uploader__create-invoice {
+  .hidden-button {
+    display: none;
+  }
+}
+.iconDimension {
+  padding-left: 15px;
+  @include for-phone {
+    padding-left: 0;
+    font-size: 60px !important;
+  }
+}
+.filepond--drop-label {
+  @include for-phone {
+    height: auto;
+    > label {
+      height: auto;
+    }
+  }
+}
+.fileupload-mobile-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include for-phone {
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

@@ -1,0 +1,25 @@
+.upload-document__modal {
+  .modal__content {
+    max-height: 55vh;
+    padding-top: 0;
+    .upload-document__form {
+      .upload-document__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        > div {
+          display: flex;
+          align-items: center;
+        }
+        .buttons {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          .cancel-btn {
+            margin-right: 1rem !important;
+          }
+        }
+      }
+    }
+  }
+}

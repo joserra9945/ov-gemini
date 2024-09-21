@@ -1,0 +1,128 @@
+@use "sass:map";
+.g-button {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  vertical-align: bottom;
+  overflow: hidden;
+  position: relative;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15px;
+  border-radius: 6px;
+  padding: 1rem 2rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: $button-font-size;
+  color: $button-font-color;
+  transition: color 0.5s, background-color 0.5s, box-shadow 0.5s;
+
+  &:hover {
+    transition: color 0.5s, background-color 0.5s, box-shadow 0.5s;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @each $colorName in primary, secondary, danger, success, warning, info, light
+  {
+    $new-colors: null;
+    @if map.has-key($colors, $colorName) {
+      $new-colors: addColorSet(
+        $colorName,
+        map.get($colors, $colorName),
+        map.get($colors, #{$colorName}-hover)
+      );
+    }
+    &.g-button-#{$colorName}-contained {
+      @include button-set-style($new-colors, $colorName);
+    }
+    &.g-button-#{$colorName}-outlined {
+      @include button-set-style-outlined($new-colors, $colorName);
+    }
+  }
+
+  @each $colorSize in xs, sm, md, lg, xl {
+    &.g-button-#{$colorSize} {
+      @include button-set-size($buttonSizes, $colorSize);
+    }
+  }
+
+  @each $roundedSize in xs, sm, md, lg, xl, full {
+    &.g-rounded-#{$roundedSize} {
+      @include rounded-set-size($roundedSizes, $roundedSize);
+      &.icon-only-button {
+        width: 2.357rem !important;
+      }
+    }
+  }
+
+  &.g-button-light-contained:not(.g-button-disabled) {
+    color: $primary;
+  }
+
+  &:not(.g-button-disabled):hover {
+    box-shadow: 0px 4px 20px #00000033;
+    cursor: pointer;
+  }
+
+  &.g-button-disabled {
+    background-color: $button-disabled;
+    border-color: $button-disabled;
+    &.g-button-link {
+      background: none;
+      color: $button-disabled;
+    }
+    &:hover {
+      border-color: $button-disabled !important;
+      box-shadow: none;
+      cursor: unset;
+    }
+  }
+
+  &.g-button-link {
+    padding: 0;
+    span {
+      padding: 10px;
+    }
+  }
+
+  &:not(.g-button-link) {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25),
+      inset 0px 1px 1px rgba(0, 0, 0, 0.03),
+      inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  &.--no-border-radius {
+    border-radius: 0 3px 3px 0;
+  }
+
+  @include for-phone {
+    &.g-button-lg {
+      font-size: 1rem;
+    }
+  }
+}
+
+a.g-button:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.icon-only-button {
+  padding: 0.5rem !important;
+  width: 2.357rem !important;
+  justify-content: center !important;
+}
+
+.g-button.g-button-link.icon-only-button {
+  .g-button__label {
+    padding: 0;
+  }
+}

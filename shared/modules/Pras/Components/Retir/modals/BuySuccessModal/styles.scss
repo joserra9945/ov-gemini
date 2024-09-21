@@ -1,0 +1,35 @@
+@import '../../styles.scss';
+@import '../styles.scss';
+
+.retir-buy-success__modal {
+    @include retir-modal();
+
+    .modal__content {
+        @include retir-modal-content();
+
+        .retir-purshase-success-content {
+            width: 457px;
+            height: 401px;
+        
+            > div:nth-of-type(1) {
+                @include retir-font(#0069AA, 40px, 32px,700);
+            }
+        
+            > div:nth-of-type(2) {
+                line-height: 19px;
+            }
+        
+            > div:nth-of-type(3) {
+                @include retir-font(#212121, 19px, 16px, 500);
+            }
+        
+            .retir-purshase-status-dialog-close {
+                background: #0069AA;
+            }
+        
+            .retir-purshase-status-dialog-update {
+                background: #30D59B;
+            }
+        }
+    }
+  }

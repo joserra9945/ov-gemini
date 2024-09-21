@@ -1,0 +1,40 @@
+.select-button__wrapper {
+  padding: 6px;
+  background-color: #f2f5f7;
+  border-radius: 5px;
+  width: 100%;
+  .p-selectbutton .p-button.p-component {
+    background-color: #f2f5f7;
+    color: #cbcbcb;
+    border-radius: 5px;
+    font-size: 12px;
+    border: none;
+    width: calc(50% - 5px);
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+    &.p-highlight {
+      background-color: white;
+      color: $primary;
+      font-weight: 550;
+      box-shadow: 0 0 2.2px rgba(0, 0, 0, 0.014), 0 0 5.3px rgba(0, 0, 0, 0.028);
+      &:hover {
+        background-color: none;
+        border: none;
+      }
+      &.p-focus {
+        border: none;
+      }
+    }
+    .button-select {
+      width: 100%;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        margin-right: 10px;
+      }
+    }
+  }
+}
